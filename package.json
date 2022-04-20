@@ -1,0 +1,21 @@
+{
+  "name": "p3_oh_my_food_marceaux_melvin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./Marceaux_Melvin_2_style_042022/sass/index.scss:./Marceaux_Melvin_2_style_042022/index.css --style expanded",
+    "prefix": "postcss ./Marceaux_Melvin_2_style_042022/index.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moonkey44/P3_Oh_My_Food_Marceaux_Melvin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Moonkey44/P3_Oh_My_Food_Marceaux_Melvin/issues"
+  },
+  "homepage": "https://github.com/Moonkey44/P3_Oh_My_Food_Marceaux_Melvin#readme",
+  "browserslist": "last 4 versions"
+}
