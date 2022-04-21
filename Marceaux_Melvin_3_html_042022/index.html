@@ -11,44 +11,49 @@
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
   <body>
-    <header class="header">
-      <img class="header__logo" src="/Marceaux_Melvin_1_assets_042022/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
-    </header>
-    <main>
-      <section class="reservation">
-        <header class="reservation__position">
+    <header>
+      <img src="/Marceaux_Melvin_1_assets_042022/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
+      <div class="information">
+        <header class="information__position">
           <span class="fa-solid fa-location-dot"></span>
           <p>Paris, Belleville</p>
         </header>
-        <nav class="reservation__information">
+        <nav class="information__navigation">
           <h1><strong>Réservez le menu qui vous convient</strong></h1>
-          <p class="reservation__information--discover">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-          <a href="#nav-exploring" class="reservation__exploring">
+          <p class="information__navigation__discover">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+          <a href="#nav-exploring" class="information__navigation__btn">
             <p>Explorer nos restaurants</p>
           </a>   
         </nav>
-      </section>
+      </div>
+    </header>
+    <main>
       <section>
         <h2>Fonctionnement</h2>
         <nav class="working-restaurant">
             <a href="#" class="working-restaurant__btn">
-              <label>1</label>
-              <span class="fa-solid fa-mobile-screen-button"></span>
+              <div class="btn-label">
+                <span class="btn-label__num">1</span>
+                <span class="fa-solid fa-mobile-screen-button btn-label__icon"></span>
+              </div>
               <p>Choisissez un restaurant</p>
             </a>
             <a href="#" class="working-restaurant__btn">
-              <label>2</label>
-              <div class="working-restaurant__btn--icon">
-                <span class="fa-solid fa-ellipsis-vertical"></span>
-                <span class="fa-solid fa-bars"></span>
+              <div class="btn-label">
+                <span class="btn-label__num">2</span>
+                <div class="btn-label__icon">
+                  <span class="fa-solid fa-ellipsis-vertical"></span>
+                  <span class="fa-solid fa-bars"></span>
+                </div>
               </div>
               <p>Composez votre menu</p>
             </a>
             <a href="#" class="working-restaurant__btn">
-              <label>3</label>
-              <span class="fa-solid fa-store"></span>
-              <p>Dégustez au restaurant</p>
+              <div class="btn-label">
+                <span class="btn-label__num">3</span>
+                <span class="fa-solid fa-store btn-label__icon"></span>
               </div>
+              <p>Dégustez au restaurant</p>
             </a>       
         </nav>
       </section>

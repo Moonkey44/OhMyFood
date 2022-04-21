@@ -23,48 +23,49 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70px;
   }
-  .header__logo {
-    height: 40px;
+  header img {
+    height: 60px;
     width: 220px;
   }
 
-  .reservation {
+  .information {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f0f6ff;
   }
-  .reservation__position {
+  .information__position {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
     opacity: 0.8;
     background-color: #e6e6e6;
-    box-shadow: 0px 3px 5px 0px rgba(179, 174, 174, 0.75) inset;
+    box-shadow: 0px 2px 6px 0px rgba(179, 174, 174, 0.75) inset;
   }
-  .reservation__position span {
+  .information__position span {
     margin-right: 25px;
     font-size: 20px;
     width: auto;
   }
-  .reservation__position p {
+  .information__position p {
     font-size: 21px;
     font-weight: 600;
     margin-right: 40px;
   }
-  .reservation__information {
+  .information__navigation {
     width: 100%;
     font-size: 30px;
     text-align: center;
   }
-  .reservation__information h1 {
+  .information__navigation h1 {
     width: 63%;
     text-align: center;
     font-size: 34px;
@@ -72,14 +73,15 @@ p {
     text-align: center;
     margin: 50px auto 20px auto;
   }
-  .reservation__information--discover {
+  .information__navigation__discover {
     opacity: 0.6;
     font-size: 30px;
     width: 80%;
     margin: 0 auto 40px auto;
   }
-  .reservation__exploring {
+  .information__navigation__btn {
     display: flex;
+    opacity: 0.9;
     height: 75px;
     width: 50%;
     background: linear-gradient(#FF79DA, #9356DC);
@@ -90,10 +92,11 @@ p {
     margin: 0 auto 70px auto;
     box-shadow: 0px 5px 5px 1px rgba(207, 203, 203, 0.75);
   }
-  .reservation__exploring p {
+  .information__navigation__btn p {
     font-size: 25px;
   }
 
+  /* Section fonctionnement mobile */
   .working-restaurant {
     border: 1px solid black;
     display: flex;
@@ -111,25 +114,30 @@ p {
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 0 3px 6px 1px rgba(227, 220, 220, 0.75);
-    justify-content: space-around;
   }
-  .working-restaurant__btn label {
+  .working-restaurant__btn p {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .btn-label {
+    display: flex;
+    align-items: center;
+    width: 30%;
+  }
+  .btn-label__num {
     background: #9356DC;
     font-size: 14px;
     color: white;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50px;
+    line-height: 25px;
     text-align: center;
-    line-height: 20px;
   }
-  .working-restaurant__btn span {
-    height: 50px;
+  .btn-label__icon {
     opacity: 0.6;
-    line-height: 50px;
-  }
-  .working-restaurant__btn p {
-    font-weight: bold;
+    color: black;
   }
 }
 
