@@ -4,57 +4,52 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="Marceaux_Melvin_2_style_042022/reset.css"/reset.css" type="text/css">
-    <link rel="stylesheet" href="Marceaux_Melvin_2_style_042022/normalize.css" type="text/css"> 
-    <link rel="stylesheet" href="Marceaux_Melvin_2_style_042022/index.css" type="text/css">    
+    <!-- <link rel="stylesheet" href="Marceaux_Melvin_2_style_042022/reset.css" type="text/css">
+    <link rel="stylesheet" href="Marceaux_Melvin_2_style_042022/normalize.css" type="text/css"> -->
+    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/index.css" type="text/css">    
     <script src="https://kit.fontawesome.com/2d2374fe7a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
   <body>
-    <header>
-      <img src="/Marceaux_Melvin_1_assets_042022/logo/ohmyfood.png" alt="logo ohmyfood"/>
+    <header class="header">
+      <img class="header__logo" src="/Marceaux_Melvin_1_assets_042022/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
     </header>
     <main>
       <section class="reservation">
-        <header>
+        <header class="reservation__position">
           <span class="fa-solid fa-location-dot"></span>
-          <p><mark>Paris</mark>, Belleville</p>
+          <p>Paris, Belleville</p>
         </header>
-        <h2><strong><mark>Réservez</mark> le menu qui vous convient</strong></h2>
-        <p><cite>Découvrez des <mark>restaurants</mark> d'exception, séléctionnés par nos soins</cite></p>
-        <a href="#nav-exploring">
-          <button class="exploring-button">Explorez nos restaurants</button>
-        </a>   
+        <nav class="reservation__information">
+          <h1><strong>Réservez le menu qui vous convient</strong></h1>
+          <p class="reservation__information--discover">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+          <a href="#nav-exploring" class="reservation__exploring">
+            <p>Explorer nos restaurants</p>
+          </a>   
+        </nav>
       </section>
-      <section class="working">
+      <section>
         <h2>Fonctionnement</h2>
         <nav class="working-restaurant">
-          <ol>
-            <a href="#">
-              <li class="working-restaurant__label">
-                <button class="btn">
-                  <span class="btn-icon fa-solid fa-mobile-screen-button"></span>Choisissez un restaurant
-                </button>
-              </li>
+            <a href="#" class="working-restaurant__btn">
+              <label>1</label>
+              <span class="fa-solid fa-mobile-screen-button"></span>
+              <p>Choisissez un restaurant</p>
             </a>
-            <a href="#">
-              <li class="working-restaurant__label">
-                <button class="btn">
-                  <span class="btn-icon">
-                    <span class="fa-solid fa-ellipsis-vertical"></span>
-                    <span class="fa-solid fa-bars"></span>
-                  </span>Composez votre <mark>menu</mark>
-                </button>
-              </li>
+            <a href="#" class="working-restaurant__btn">
+              <label>2</label>
+              <div class="working-restaurant__btn--icon">
+                <span class="fa-solid fa-ellipsis-vertical"></span>
+                <span class="fa-solid fa-bars"></span>
+              </div>
+              <p>Composez votre menu</p>
             </a>
-            <a href="#">
-              <li class="working-restaurant__label">
-                <button class="btn">
-                  <span class="btn-icon fa-solid fa-store"></span><mark>Dégustez</mark> au restaurant
-                </button>
-              </li>
-            </a>
-          </ol>         
+            <a href="#" class="working-restaurant__btn">
+              <label>3</label>
+              <span class="fa-solid fa-store"></span>
+              <p>Dégustez au restaurant</p>
+              </div>
+            </a>       
         </nav>
       </section>
       <section class="restaurants" id="nav-exploring">

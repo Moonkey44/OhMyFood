@@ -1,4 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Shrikhand&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1,h2,h3
+{
+    font-family: "Shrikhand","sans-serif";
+}
+
+h2{
+    font-size: 32px;
+    margin-left: 30px;
+}
+
+p{
+    font-family: "Roboto","sans-serif";
+}
+
+$color-primary: #9356DC;
+$color-secondary:#FF79DA;
+$color-tertary:#99E2D0;
+
+
+@media screen and (max-width: 768px) {
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        &__logo{
+            height: 40px;
+            width: 220px;
+        }
+    } 
+
+    .reservation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lighten($color: #DEEBFF, $amount: 3.5%);
+        &__position {
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            width: 100%;
+            opacity: 0.8;
+            background-color: lighten(grey,40%);
+            box-shadow: 0px 3px 5px 0px rgba(179,174,174,0.75) inset;
+            span{
+                margin-right: 25px;
+                font-size: 20px;
+                width: auto;
+            }
+            p{
+                font-size: 21px;
+                font-weight: 600;
+                margin-right: 40px;
+            }            
+        }
+        
+        &__information{
+            width: 100%;
+            font-size: 30px; 
+            text-align: center;
+            h1{
+                width: 63%;
+                text-align: center;
+                font-size: 34px;
+                font-weight: normal;
+                text-align: center;
+                margin: 50px auto 20px auto;
+            }
+            &--discover{
+                opacity: 0.6;
+                font-size: 30px;
+                width: 80%;
+                margin: 0 auto 40px auto;
+            }
+
+        }
+        &__exploring
+        {
+            display: flex;
+            height: 75px;
+            width:50%;
+            background: linear-gradient(#FF79DA, #9356DC);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 40px;
+            margin: 0 auto 70px auto;
+            box-shadow: 0px 5px 5px 1px rgba(207,203,203,0.75);
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+
+    .working-restaurant
+    {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__btn{
+            display: flex;
+            align-items: center;
+            background: lighten($color: #DEEBFF, $amount: 3.5%);
+            border: none;
+            height: 70px;
+            width: 65%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border-radius: 20px;
+            box-shadow: 0 3px 6px 1px rgba(227,220,220,0.75);
+            justify-content: space-around;
+            label{
+                background: $color-primary;
+                font-size: 14px;
+                color: white;
+                width: 20px;
+                height:20px;
+                border-radius: 50px;
+                text-align: center;
+                line-height: 20px;
+            }
+            span{
+                height: 50px;
+                opacity: 0.6;
+                line-height: 50px;
+            }
+            &--icon{
+                span{
+                    
+                }
+            }
+            p{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 
