@@ -52,7 +52,7 @@ li{
 
 $color-primary: #9356DC;
 $color-secondary:#FF79DA;
-$color-tertary:#99E2D0;
+$color-tertiary:#99E2D0;
 
 
 @media screen and (max-width: 768px){
@@ -150,7 +150,7 @@ $color-tertary:#99E2D0;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 25%;
+        width: 27%;
         position: relative;
         &__num{   
             position: absolute;
@@ -239,8 +239,8 @@ $color-tertary:#99E2D0;
         width: 130px;
         padding: 8px;
         border-radius: 4px;
-        background-color: $color-tertary;
-        color: darken($color: $color-tertary, $amount: 30%);
+        background-color: $color-tertiary;
+        color: darken($color: $color-tertiary, $amount: 30%);
         text-align: center;
     }
 
