@@ -7,20 +7,47 @@
 
 a{
     text-decoration: none;
-    color: black;
+    color: inherit;
+}
+
+mark{
+    background-color: inherit;
 }
 
 h1,h2,h3{
     font-family: "Shrikhand","sans-serif";
+    font-weight: normal;
+}
+
+p,li{
+    font-family: "Roboto","sans-serif";   
+}
+
+h1{
+    width: 63%;
+    text-align: center;
+    font-size: 34px;
+    text-align: center;
+    margin: 50px auto 20px auto;
 }
 
 h2{
     font-size: 32px;
-    margin-left: 30px;
+    width: 60%;
+    margin-left: 8%;
+    margin-bottom: 30px;
+    margin-top: 70px;
 }
 
-p{
-    font-family: "Roboto","sans-serif";
+h3
+{
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+li{
+    list-style-type: none;
 }
 
 $color-primary: #9356DC;
@@ -50,8 +77,9 @@ $color-tertary:#99E2D0;
             align-items: center; 
             justify-content: center;
             width: 100%;
+            height: 60px;
             opacity: 0.8;
-            background-color: lighten(grey,40%);
+            background-color: lighten(grey,41%);
             box-shadow: 0px 2px 6px 0px rgba(179,174,174,0.75) inset;
             span{
                 margin-right: 25px;
@@ -68,21 +96,13 @@ $color-tertary:#99E2D0;
             width: 100%;
             font-size: 30px; 
             text-align: center;
-            h1{
-                width: 63%;
-                text-align: center;
-                font-size: 34px;
-                font-weight: normal;
-                text-align: center;
-                margin: 50px auto 20px auto;
-            }
             &__discover{
                 opacity: 0.6;
                 font-size: 30px;
                 width: 80%;
                 margin: 0 auto 40px auto;
             }
-            &__btn{
+            &__button{
                 display: flex;
                 opacity: 0.9;
                 height: 75px;
@@ -102,49 +122,161 @@ $color-tertary:#99E2D0;
     }
 
     /* Section fonctionnement mobile */
-    .working-restaurant{
-        border: 1px solid black;
+    .working{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 0 30px 0;
         &__btn{
             display: flex;
             align-items: center;
             background: lighten($color: #DEEBFF, $amount: 3.5%);
             border: none;
-            height: 70px;
-            width: 65%;
+            height: 100px;
+            width: 70%;
             margin-bottom: 10px;
             margin-top: 10px;
-            border-radius: 20px;
-            box-shadow: 0 3px 6px 1px rgba(227,220,220,0.75);
+            border-radius: 24px;
+            box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
             p{
                 text-align: center;
                 font-weight: bold;
+                font-size: 21px;
             }       
         }
     }
 
     .btn-label{
         display: flex;
+        justify-content: center;
         align-items: center;
-        width: 30%;
+        width: 25%;
+        position: relative;
         &__num{   
+            position: absolute;
             background: $color-primary;
-            font-size: 14px;
+            font-size: 18px;
             color: white;
-            width: 25px;
-            height:25px;
+            width: 28px;
+            height:28px;
             border-radius: 50px;
-            line-height: 25px;
+            line-height: 28px;
             text-align: center;
+            left: -14px;
         }
         &__icon{
-            opacity: 0.6;
+            opacity: 0.5;
             color: black;
+            font-size: 23px;
+            margin-top: 2px;
         }  
     }
-    
+
+    .restaurants{
+        background-color: lighten($color: #DEEBFF, $amount: 3.5%);
+        &__header{
+            align-items: inherit;
+        }
+        &__article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 40px;
+        }
+    }
+
+    .card{  
+        width: 85%;
+        margin-bottom: 30px;
+        img
+        {
+            width: 100%;
+            height: 300px;
+            -o-object-fit: cover;
+               object-fit: cover;
+            display:flex;
+            margin:auto;
+            border-radius: 20px 20px 0 0; 
+        }
+        figure{
+            margin: 0;
+            
+        }
+        
+        &__figcaption{
+            display: flex;
+            height: 110px;
+            background-color: white;
+            border-radius:0 0 20px 20px;
+            div{
+                width: 100%;
+                padding-left: 20px;
+            }
+            &__heart{
+                margin-top: 26px;
+                font-size: 38px;
+                margin-right: 8%;
+            }
+            p{
+                font-size: 24px;
+                margin-top: 8px;
+                margin-bottom: 30px;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .new{  
+        position: relative;
+    }
+    .new::before{
+        content: "Nouveau";
+        position: absolute;
+        top: 20px;
+        right: 3%;
+        font-weight: bold;
+        font-size: 21px;
+        width: 130px;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: $color-tertary;
+        color: darken($color: $color-tertary, $amount: 30%);
+        text-align: center;
+    }
+
+    footer{
+        background-color: lighten(black,20%);
+        color: white;
+        height: 250px;
+        padding-top: 30px;
+        mark{
+            color: white;
+            font-weight: normal;
+        }
+        h2{
+            margin-left: 7%;
+            margin-top: 0;
+            font-size: 27px;
+        }
+        ul{
+            margin-left: 7%;
+        }
+        li:first-child{
+            margin-left: 6px;
+        }
+        li{
+            margin-bottom: 10px;
+            display: flex;
+            font-size: 23px;
+            span{
+                margin-right: 14px;
+                font-size: 16px;
+                margin-top: 3px;
+            }
+            
+
+        }
+    }
 }
 
 
