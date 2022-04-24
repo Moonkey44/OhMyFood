@@ -107,13 +107,13 @@ $color-tertiary:#99E2D0;
                 opacity: 0.9;
                 height: 75px;
                 width:50%;
-                background: linear-gradient(#FF79DA, #9356DC);
                 justify-content: center;
                 align-items: center;
                 color: white;
                 border-radius: 40px;
                 margin: 0 auto 70px auto;
                 box-shadow: 0px 5px 5px 1px rgba(207,203,203,0.75);
+                background-image: linear-gradient(#FF79DA, #9356DC);
                 p{
                     font-size: 25px;
                 }
@@ -188,6 +188,7 @@ $color-tertiary:#99E2D0;
     .card{  
         width: 85%;
         margin-bottom: 30px;
+        position: relative;
         img
         {
             width: 100%;
@@ -204,18 +205,18 @@ $color-tertiary:#99E2D0;
         }
         
         &__figcaption{
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            width: 100%;
             display: flex;
             height: 110px;
             background-color: white;
             border-radius:0 0 20px 20px;
             div{
+                position: relative;
                 width: 100%;
                 padding-left: 20px;
-            }
-            &__heart{
-                margin-top: 26px;
-                font-size: 38px;
-                margin-right: 8%;
             }
             p{
                 font-size: 24px;
@@ -224,6 +225,22 @@ $color-tertiary:#99E2D0;
                 opacity: 0.7;
             }
         }
+        .fa-heart{
+            display:block;
+            position: absolute;
+            font-size: 38px;
+            font-weight: 500;
+            right: 45px;
+            bottom:44px;
+            &:hover{  
+                background-clip: text;
+                -webkit-background-clip: text;
+                background-image:linear-gradient(#9356DC,#FF79DA);
+                font-weight: bold;  
+                color: transparent;
+                transition:color 1s ease;    
+            }
+        }          
     }
 
     .new{  
