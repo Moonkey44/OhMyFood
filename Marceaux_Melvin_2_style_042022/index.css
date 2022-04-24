@@ -5,7 +5,6 @@
 }
 
 a {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -44,16 +43,10 @@ h3 {
   margin-top: 25px;
 }
 
-li {
-  list-style-type: none;
-}
-
 @media screen and (max-width: 768px) {
   header {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
   header img {
     height: 60px;
@@ -79,7 +72,7 @@ li {
   }
   .information__position span {
     margin-right: 25px;
-    font-size: 20px;
+    font-size: 23px;
     width: auto;
   }
   .information__position p {
@@ -92,7 +85,7 @@ li {
     font-size: 30px;
     text-align: center;
   }
-  .information__navigation__discover {
+  .information__navigation__description {
     opacity: 0.6;
     font-size: 30px;
     width: 80%;
@@ -115,7 +108,6 @@ li {
     font-size: 25px;
   }
 
-  /* Section fonctionnement mobile */
   .working {
     display: flex;
     flex-direction: column;
@@ -139,38 +131,45 @@ li {
     font-weight: bold;
     font-size: 21px;
   }
-
-  .btn-label {
+  .working__btn .btn-label {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 27%;
     position: relative;
   }
-  .btn-label__num {
+  .working__btn .btn-label__num {
     position: absolute;
     background: #9356DC;
     font-size: 18px;
     color: white;
     width: 28px;
     height: 28px;
-    border-radius: 50px;
+    border-radius: 14px;
     line-height: 28px;
     text-align: center;
     left: -14px;
   }
-  .btn-label__icon {
+  .working__btn .btn-label__icon {
     opacity: 0.5;
     color: black;
     font-size: 23px;
     margin-top: 2px;
+  }
+  .working__btn:active .btn-label__icon {
+    color: #9356DC;
+    opacity: 1;
+  }
+  .working__btn:focus .btn-label__icon {
+    color: #9356DC;
+    opacity: 1;
   }
 
   .restaurants {
     background-color: #f0f6ff;
   }
   .restaurants__header {
-    align-items: inherit;
+    justify-content: left;
   }
   .restaurants__article {
     display: flex;
@@ -178,13 +177,29 @@ li {
     align-items: center;
     padding-bottom: 40px;
   }
-
-  .card {
+  .restaurants__article .card {
     width: 85%;
     margin-bottom: 30px;
     position: relative;
   }
-  .card img {
+  .restaurants__article .card .new {
+    position: relative;
+  }
+  .restaurants__article .card .new::before {
+    content: "Nouveau";
+    position: absolute;
+    top: 20px;
+    right: 3%;
+    font-weight: bold;
+    font-size: 21px;
+    width: 20%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #99E2D0;
+    color: #32b091;
+    text-align: center;
+  }
+  .restaurants__article .card img {
     width: 100%;
     height: 300px;
     -o-object-fit: cover;
@@ -193,10 +208,10 @@ li {
     margin: auto;
     border-radius: 20px 20px 0 0;
   }
-  .card figure {
+  .restaurants__article .card figure {
     margin: 0;
   }
-  .card__figcaption {
+  .restaurants__article .card__figcaption {
     display: inline-block;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -206,51 +221,33 @@ li {
     background-color: white;
     border-radius: 0 0 20px 20px;
   }
-  .card__figcaption div {
+  .restaurants__article .card__figcaption div {
     position: relative;
     width: 100%;
     padding-left: 20px;
   }
-  .card__figcaption p {
+  .restaurants__article .card__figcaption p {
     font-size: 24px;
     margin-top: 8px;
     margin-bottom: 30px;
     opacity: 0.7;
   }
-  .card .fa-heart {
-    display: block;
+  .restaurants__article .card .fa-heart {
     position: absolute;
     font-size: 38px;
     font-weight: 500;
-    right: 45px;
-    bottom: 44px;
   }
-  .card .fa-heart:hover {
+  .restaurants__article .card .fa-heart:hover {
     background-clip: text;
     -webkit-background-clip: text;
     background-image: linear-gradient(#9356DC, #FF79DA);
     font-weight: bold;
     color: transparent;
-    transition: color 1s ease;
+    transition: color 0.5s ease;
   }
-
-  .new {
-    position: relative;
-  }
-
-  .new::before {
-    content: "Nouveau";
-    position: absolute;
-    top: 20px;
-    right: 3%;
-    font-weight: bold;
-    font-size: 21px;
-    width: 130px;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #99E2D0;
-    color: #32b091;
-    text-align: center;
+  .restaurants__article .fa-heart {
+    right: 45px;
+    bottom: 44px;
   }
 
   footer {

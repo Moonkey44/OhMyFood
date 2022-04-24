@@ -1,0 +1,17 @@
+.new{  
+    position: relative;
+}
+.new::before{
+    content: "Nouveau";
+    position: absolute;
+    top: 20px;
+    right: 3%;
+    font-weight: bold;
+    font-size: 21px;
+    width: 20%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 30%);
+    text-align: center;
+}

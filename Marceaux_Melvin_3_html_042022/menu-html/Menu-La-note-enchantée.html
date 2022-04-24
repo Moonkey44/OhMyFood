@@ -4,9 +4,9 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/normalize.css" type="text/css"> 
-    <link rel="stylesheet" href="css/style.css" type="text/css">    
+    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/reset.css" type="text/css">
+    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/normalize.css" type="text/css"> 
+    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/menu.css" type="text/css">    
     <script src="https://kit.fontawesome.com/2d2374fe7a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
@@ -15,86 +15,97 @@
         <a href="\Marceaux_Melvin_3_html_042022\index.html">
           <span class="fa-solid fa-arrow-left"></span>
         </a>
-        <img src="/Marceaux_Melvin_1_assets_042022/logo/ohmyfood.png" alt="logo ohmyfood"/>
+        <img src="/Marceaux_Melvin_1_assets_042022/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
       </header>
       <div>
-        <img class="background" src="/Marceaux_Melvin_1_assets_042022/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="À la française" style="width: 80%; height: 250px; object-fit: cover; display:flex; margin:auto;"/>
+        <img class="background" src="/Marceaux_Melvin_1_assets_042022/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="À la française"/>
       </div>
-      <section>
+      <section class="menu">
         <header>
-        </h2>Le délice des sens</h2>
-        <span class="fa-solid fa-heart heart--active"></span>
+        <h2>La note enchantée</h2>
+        <span class="fa-solid fa-heart heart"></span>
         </header>
-        <article class="menu">
+        <article class="menu__article">
           <form method="post" action="#">
             <fieldset>
               <legend>ENTRÉES</legend>
               <p>
                 <label class="card-label" for="card1">
-                  <h3>Tartare de thon</h3>
-                  Assaisonné au yuzu
+                  <h3>Ravioles de foie gras</h3>
+                  Accompagnés de leur crème à la truffe
                   <span class="card-label__price">25€</span>
-                </label>
-              </p>  
-              <input type="button" name="tartare2" id="card1" class="card"/>
+                </label> 
+              </p>
+              <input type="button" name="raviole" id="card1" class="menu__btn"/>
               <div class="card-div">
                 <span class="fa-solid fa-check card-div__checkbox"></span>
               </div>
               <p>
                 <label class="card-label" for="card2">
-                  <h3>Bouchée de homard croustillant</h3>
-                  Et sa farandole de petits légumes
+                  <h3>Caviar osciètre</h3>
+                  Sur blini à la farine de blé noir
                   <span class="card-label__price">35€</span>
                 </label>
-              </p>
-              <input type="button" name="bouchee" id="card2" class="card"/>
+              </p>   
+              <input type="button" name="caviar" id="card2" class="menu__btn"/>
               <div class="card-div">
                 <span class="fa-solid fa-check card-div__checkbox"></span>
               </div>
               <p>
                 <label class="card-label" for="card3">
-                  <h3>Velouté de cèpes</h3>
-                  Aux truffes
+                  <h3>Homard et espuma de potiron</h3>
+                  Mariné aux zestes d'orange
                   <span class="card-label__price">20€</span>
                 </label>
               </p>
-              <input type="button" name="veloute2" id="card3" class="card"/>
+              <input type="button" name="potiron" id="card3" class="menu__btn"/>
               <div class="card-div">
                 <span class="fa-solid fa-check card-div__checkbox"></span>
               </div>
+              <p>
+                <label class="card-label" for="card4">
+                  <h3>Foie gras de canard cuit entier</h3>
+                  Confiture de figue et pain toasté
+                  <span class="card-label__price">35€</span>
+                </label>
+              </p>
+            <input type="button" name="foie2" id="card4" class="menu__btn"/>
+            <div class="card-div">
+              <span class="fa-solid fa-check card-div__checkbox"></span>
+            </div>
             </fieldset>
             <fieldset>
               <legend>PLATS</legend>
               <p>
-                <label class="card-label" for="card4">
-                  <h3>Poulet rôti aux herbes de Provence</h3>
-                  Et sa crème de truffe
+                <label class="card-label" for="card5">
+                  <h3>Noix de coquilles Saint-Jacques</h3>
+                  Sur lit de purée de céleri-rave
                   <span class="card-label__price">40€</span>
                 </label>
               </p>
-              <input type="button" name="poulet" id="card4" class="card"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
-              </div>
-              <p>
-                <label class="card-label" for="card5">
-                  <h3>Langouste rôtie</h3>
-                  Et ses légumes de saison
-                  <span class="card-label__price">35€</span>
-                </label>
-              </p>
-              <input type="button" name="langouste" id="card5" class="card"/>
+              <input type="button" name="coquilles" id="card5" class="menu__btn"/>
               <div class="card-div">
                 <span class="fa-solid fa-check card-div__checkbox"></span>
               </div>
               <p>
                 <label class="card-label" for="card6">
-                  <h3>Côte de boeuf Angus</h3>
-                  Et sa purée de panais
+                  <h3>Langoustine poêlée</h3>
+                  Purée de patate douce
+                  <span class="card-label__price">35€</span>
+                </label>
+              </p>
+              <input type="button" name="langoustine" id="card6" class="menu__btn"/>
+              <div class="card-div">
+                <span class="fa-solid fa-check card-div__checkbox"></span>
+              </div>
+              <p>
+                <label class="card-label" for="card7">
+                  <h3>Mijoté de queue de boeuf</h3>
+                  Et riz sauvage aux zestes de citron
                   <span class="card-label__price">44€</span>
                 </label>
               </p>
-              <input type="button" name="puree-de-panais" id="card6" class="card"/>
+              <input type="button" name="queue-de-boeuf" id="card7" class="menu__btn"/>
               <div class="div">
                 <span class="fa-solid fa-check div__checkbox"></span>
               </div>
@@ -102,35 +113,35 @@
             <fieldset>
               <legend>DESSERTS</legend>
               <p>
-                <label class="card-label" for="card7">
-                  <h3>Farandole de desserts</h3>
-                  Du chef
+                <label class="card-label" for="card8">
+                  <h3>Macaron noisette et chocolat</h3>
+                  Glace au caramel brun et sel de Guérande
                   <span class="card-label__price">18€</span>
                 </label>
               </p>
-              <input type="button" name="farandoles" id="card7" class="card"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
-              </div>
-              <p>
-                <label class="card-label" for="card8">
-                  <h3>Crème brulée</h3>
-                  Revisitée
-                  <span class="card-label__price">22€</span>
-                </label>
-              </p>
-              <input type="button" name="creme-brulee" id="card8" class="card"/>
+              <input type="button" name="macaron2" id="card8" class="menu__btn"/>
               <div class="div">
                 <span class="fa-solid fa-check div__checkbox"></span>
               </div>
               <p>
                 <label class="card-label" for="card9">
-                  <h3>Tiramisu</h3>
-                  À la noisette
+                  <h3>Baba au rhum revisité</h3>
+                  Avec son coulis de citron
+                  <span class="card-label__price">22€</span>
+                </label>
+              </p>
+              <input type="button" name="baba-au-rhum" id="card9" class="menu__btn"/>
+              <div class="div">
+                <span class="fa-solid fa-check div__checkbox"></span>
+              </div>
+              <p>
+                <label class="card-label" for="card10">
+                  <h3>Tarte au citron meringuée</h3>
+                  Déstructurée
                   <span class="card-label__price">23€</span>
                 </label>
               </p>
-              <input type="button" name="tiramisu" id="card9" class="card"/>
+              <input type="button" name="citron-meringuee" id="card10" class="menu__btn"/>
               <div class="div">
                 <span class="fa-solid fa-check div__checkbox"></span>
               </div>
