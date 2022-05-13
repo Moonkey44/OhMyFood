@@ -66,32 +66,58 @@ h3
 }
 
 .card{
-    background: white;
     display: flex;
-    justify-content: space-between;
+    background: white;
+    justify-content:stretch;
     align-items:center;
     margin: 15px auto 10px auto;
     padding-left: 4%;
-    height: 70px;
-    border-radius: 20px;
+    height: 75px;
+    border-radius: 15px;
     box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
     width: 100%;
-    h3{
-        margin: 0 0 10px 0;
-        font-size: 1.2em;
-    }
     &__description{
-        overflow: hidden;
-        text-overflow: ellipsis;
         font-size: 0.9em;
+        min-width: 60%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        h3{
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
     }
     &__price{
-        padding-right: 30px;
+        display: inline-block;
+        text-align: center;
         padding-top: 30px;
-        font-weight: bold;
+        width: 21%;
     }
+    .fa-solid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 19%;
+        height: 100%;
+        background-color: white;
+        text-align: center;
+        background: #99E2D0;
+        border-radius: 0 15px 15px 0;
+        line-height: 20px;
+        &::after{
+            content: "\f00c";
+            display: inline-block;
+            background-color: white;
+            color:#99E2D0;
+            border-radius: 50px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
     &:hover{
         .card__price{
+
         }
     }
 }

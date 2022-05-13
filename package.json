@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass" : "sass --watch ./Marceaux_Melvin_2_style_042022/sass/index.scss:./Marceaux_Melvin_2_style_042022/index.css --watch ./Marceaux_Melvin_2_style_042022/sass/menu.scss:./Marceaux_Melvin_2_style_042022/menu.css --style expanded",
-    "prefix": "postcss ./Marceaux_Melvin_2_style_042022/index.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022/prefixed/"
+    "prefix": "postcss ./Marceaux_Melvin_2_style_042022/index.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022/prefixed",
+    "prefix-menu": "postcss ./Marceaux_Melvin_2_style_042022/menu.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022/prefixed/"
   },
   "repository": {
     "type": "git",
