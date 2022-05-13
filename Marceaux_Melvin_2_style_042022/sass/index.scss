@@ -4,13 +4,13 @@
 h1{
     width: 63%;
     text-align: center;
-    font-size: 34px;
+    font-size: 1.3em;
     text-align: center;
     margin: 50px auto 20px auto;
 }
 
 h2{
-    font-size: 32px;
+    font-size: 2.2em;
     width: 60%;
     margin-left: 8%;
     margin-bottom: 30px;
@@ -19,20 +19,105 @@ h2{
 
 h3
 {
-    font-size: 25px;
+    font-size: 1.8em;
     margin-bottom: 0px;
-    margin-top: 25px;
+    padding-top: 25px;
 }
 
-@media screen and (max-width: 768px){
+// Responsive mobile - Hight mobile (768px)
+
+@media screen and (max-width: 48em){
     @import "./layouts/header";
-    @import "./pages/description";
+    @import "./pages/information";
     // Section fonctionnement mobile
     @import "./pages/working";
     // Section article mobile
     @import "./pages/article";
+    @import "./components/new";
     @import "./layouts/footer";
 }
 
+// Medium mobile (520px)
 
+@media screen and (max-width: 32.5em) {
+    h1{
+        font-size: 0.8em;
+        width: 75%;
+    }
+    h2{
+        font-size: 1.4em;
+        margin-top: 50px;
+    }
+    h3{
+        padding-top: 18px;
+        font-size: 1.2em;
+    }
+    .information__position span{
+        font-size: 1.2em;
+    }
+    .information__position p{
+        font-size: 1.2em;
+    }
+    .information__navigation__description{
+        font-size: 0.6em;
+        width: 90%;
+    }
+    .information__navigation__button{
+        width: 65%;
+        height: 55px;
+        margin-bottom: 60px;
+        p{
+            font-size: 0.6em;
+        }
+    }
+    .working__btn{
+        width:80%;
+        p{
+            font-size: 1.1em;
+        }
+    }
+    .restaurants__article .card {
+        img{
+            height: 150px;
+        }
+        &__figcaption{
+            height: 80px;
+            p{
+                font-size: 1.1em;
+            }
+        }
+        .fa-heart{
+            font-size: 2.1em;
+        }
+    }
+    .new::before{
+        font-size: 1.1em;
+        width: 22%;
+    }
+    footer{
+        h2{
+            font-size: 1.8em;
+        }
+        li{
+            font-size:1.2em;
+            span{
+                font-size: 0.8em;
+            }
+        }
 
+    }
+}
+
+// Small mobile (280px)
+
+@media screen and (max-width: 17.5em){
+
+}
+
+// Tablet
+
+@media screen and (min-width: 48em) {
+    .restaurants__article{
+        flex-direction: row;
+    }
+}

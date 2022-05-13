@@ -1,4 +1,5 @@
 @import "./base/_base";
+@import "./base/mixin";
 @import "./utils/variables";
 @import "./pages/header-menu";
 
@@ -20,32 +21,88 @@ h3
 }
 
 .menu{
-    padding-left: 6%;
     margin-top: -75px;
     width: 100%;
     border-radius: 65px 65px 0 0;
     background-color: lighten($color: #DEEBFF, $amount: 3.5%);
+    position: relative;
     header{
         justify-content: left;
+        width: 90%;
+        margin: auto;
         @import "./components/heart";
+        .fa-heart::after{
+            top: 60%;
+        }
+        .fa-heart::before{
+            top: 60%;
+        }
         .fa-heart{
             font-size: 40px;
-            right: 65px;
-            top: 60px;
         }
         h2{
             margin-top: 70px;
-            font-size: 40px;
+            font-size: 30px;
         }
     }
     &__article{
         fieldset{
             padding: 0;
+            margin-top: 40px;
         }
-        .card-label{
-
+        legend{
+            display: block;
+            border-bottom: #99E2D0 3px solid;
+            width: 12%;
+            padding-bottom: 5px;
         }
     }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.card{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 15px auto 10px auto;
+    padding-left: 4%;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
+    width: 100%;
+    h3{
+        margin: 0 0 10px 0;
+        font-size: 1.2em;
+    }
+    &__description{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9em;
+    }
+    &__price{
+        padding-right: 30px;
+        padding-top: 30px;
+        font-weight: bold;
+    }
+    &:hover{
+        .card__price{
+        }
+    }
+}
+
+.order{
+    margin: 35px auto 80px auto;
+    @include button;
+    border: none;
+    width: 60%;
+    height: 50px;
+    font-size: 1em;
 }
 
 @import "./layouts/footer";

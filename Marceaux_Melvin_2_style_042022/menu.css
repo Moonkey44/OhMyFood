@@ -27,7 +27,7 @@ header {
 }
 header img {
   height: 60px;
-  width: 220px;
+  width: 50%;
 }
 
 header {
@@ -58,40 +58,117 @@ h3 {
 }
 
 .menu {
-  padding-left: 6%;
   margin-top: -75px;
   width: 100%;
   border-radius: 65px 65px 0 0;
   background-color: #f0f6ff;
+  position: relative;
 }
 .menu header {
   justify-content: left;
+  width: 90%;
+  margin: auto;
 }
 .menu header .fa-heart {
-  position: absolute;
   font-size: 38px;
-  font-weight: 500;
 }
-.menu header .fa-heart:hover {
+.menu header .fa-heart::after {
+  position: absolute;
+  top: 23%;
+  right: 8%;
+  content: "\f004";
+  opacity: 1;
+  font-weight: 100;
+}
+.menu header .fa-heart::before {
+  position: absolute;
+  top: 23%;
+  right: 8%;
+  content: "\f004";
+  opacity: 0;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#9356DC, #FF79DA);
   font-weight: bold;
   color: transparent;
-  transition: color 0.5s ease;
+  transform: scale(0);
+}
+.menu header .fa-heart:hover::after {
+  opacity: 0;
+}
+.menu header .fa-heart:hover::before {
+  transform: scale(1);
+  transition: all 350ms;
+  opacity: 1;
+}
+.menu header .fa-heart::after {
+  top: 60%;
+}
+.menu header .fa-heart::before {
+  top: 60%;
 }
 .menu header .fa-heart {
   font-size: 40px;
-  right: 65px;
-  top: 60px;
 }
 .menu header h2 {
   margin-top: 70px;
-  font-size: 40px;
+  font-size: 30px;
 }
 .menu__article fieldset {
   padding: 0;
+  margin-top: 40px;
 }
+.menu__article legend {
+  display: block;
+  border-bottom: #99E2D0 3px solid;
+  width: 12%;
+  padding-bottom: 5px;
+}
+.menu form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px auto 10px auto;
+  padding-left: 4%;
+  height: 70px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
+  width: 100%;
+}
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+.card__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9em;
+}
+.card__price {
+  padding-right: 30px;
+  padding-top: 30px;
+  font-weight: bold;
+}
+.order {
+  margin: 35px auto 80px auto;
+  color: white;
+  border-radius: 40px;
+  box-shadow: 0px 5px 5px 2px rgba(207, 203, 203, 0.75);
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  width: 60%;
+  height: 50px;
+  font-size: 1em;
+}
+
 footer {
   background-color: #333333;
   color: white;

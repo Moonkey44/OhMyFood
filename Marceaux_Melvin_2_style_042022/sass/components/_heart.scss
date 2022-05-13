@@ -1,13 +1,35 @@
 .fa-heart{
-    position: absolute;
     font-size: 38px;
-    font-weight: 500;
-    &:hover{  
+    &::after{
+        position: absolute;
+        top: 23%;
+        right: 8%;
+        content:"\f004";
+        opacity: 1;
+        font-weight: 100;
+    }
+        
+    &::before{
+        position: absolute;
+        top: 23%;
+        right: 8%;
+        content:"\f004";
+        opacity: 0;
         background-clip: text;
         -webkit-background-clip: text;
         background-image:linear-gradient(#9356DC,#FF79DA);
-        font-weight: bold;  
+        font-weight: bold; 
         color: transparent;
-        transition:color 0.5s ease;    
+        transform: scale(0);
+    }
+    &:hover{
+        &::after{
+            opacity: 0;
+        }
+        &::before{
+            transform: scale(1);
+            transition: all 350ms;
+            opacity: 1;
+        }
     }
 }          

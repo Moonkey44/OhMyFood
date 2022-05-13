@@ -1,3 +1,5 @@
+$content-btn:"\f3cd","\f0c9","\f54e";
+
 &__btn{
     display: flex;
     align-items: center;
@@ -36,7 +38,20 @@
             opacity: 0.5;
             color: black;
             font-size: 23px;
-            margin-top: 2px;              
+            margin-top: 2px;
+            &:nth-child(2){
+                position: absolute;
+                ::before{
+                    content: "\f142";
+                    margin-right: 0.1em;
+                    font-size: 21px;
+                }
+                ::after{
+                    content: "\f0c9";
+                    font-size: 21px;
+                    
+                }
+            }          
         }  
     }
     &:active .btn-label__icon{

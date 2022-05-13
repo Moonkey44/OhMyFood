@@ -24,13 +24,13 @@ p, li {
 h1 {
   width: 63%;
   text-align: center;
-  font-size: 34px;
+  font-size: 1.3em;
   text-align: center;
   margin: 50px auto 20px auto;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2.2em;
   width: 60%;
   margin-left: 8%;
   margin-bottom: 30px;
@@ -38,19 +38,19 @@ h2 {
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 1.8em;
   margin-bottom: 0px;
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
   header {
     display: flex;
     justify-content: center;
   }
   header img {
     height: 60px;
-    width: 220px;
+    width: 50%;
   }
 
   .information {
@@ -79,6 +79,7 @@ h3 {
     font-size: 21px;
     font-weight: 600;
     margin-right: 40px;
+    margin-top: 5px;
   }
   .information__navigation {
     width: 100%;
@@ -98,10 +99,10 @@ h3 {
     width: 50%;
     justify-content: center;
     align-items: center;
+    margin: 0 auto 70px auto;
     color: white;
     border-radius: 40px;
-    margin: 0 auto 70px auto;
-    box-shadow: 0px 5px 5px 1px rgba(207, 203, 203, 0.75);
+    box-shadow: 0px 5px 5px 2px rgba(207, 203, 203, 0.75);
     background-image: linear-gradient(#FF79DA, #9356DC);
   }
   .information__navigation__button p {
@@ -156,6 +157,18 @@ h3 {
     font-size: 23px;
     margin-top: 2px;
   }
+  .working__btn .btn-label__icon:nth-child(2) {
+    position: absolute;
+  }
+  .working__btn .btn-label__icon:nth-child(2) ::before {
+    content: "\f142";
+    margin-right: 0.1em;
+    font-size: 21px;
+  }
+  .working__btn .btn-label__icon:nth-child(2) ::after {
+    content: "\f0c9";
+    font-size: 21px;
+  }
   .working__btn:active .btn-label__icon {
     color: #9356DC;
     opacity: 1;
@@ -181,11 +194,77 @@ h3 {
     width: 85%;
     margin-bottom: 30px;
     position: relative;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
   }
-  .restaurants__article .card .new {
+  .restaurants__article .card img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: flex;
+    margin: auto;
+  }
+  .restaurants__article .card figure {
+    margin: 0;
+  }
+  .restaurants__article .card__figcaption {
+    width: 100%;
+    height: 110px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    padding-left: 20px;
+  }
+  .restaurants__article .card__figcaption p {
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    opacity: 0.7;
+  }
+  .restaurants__article .card__figcaption .fa-heart {
+    font-size: 38px;
+  }
+  .restaurants__article .card__figcaption .fa-heart::after {
+    position: absolute;
+    top: 23%;
+    right: 8%;
+    content: "\f004";
+    opacity: 1;
+    font-weight: 100;
+  }
+  .restaurants__article .card__figcaption .fa-heart::before {
+    position: absolute;
+    top: 23%;
+    right: 8%;
+    content: "\f004";
+    opacity: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    font-weight: bold;
+    color: transparent;
+    transform: scale(0);
+  }
+  .restaurants__article .card__figcaption .fa-heart:hover::after {
+    opacity: 0;
+  }
+  .restaurants__article .card__figcaption .fa-heart:hover::before {
+    transform: scale(1);
+    transition: all 350ms;
+    opacity: 1;
+  }
+  .restaurants__article .fa-heart {
+    right: 45px;
+    bottom: 44px;
+  }
+
+  .new {
     position: relative;
   }
-  .restaurants__article .card .new::before {
+
+  .new::before {
     content: "Nouveau";
     position: absolute;
     top: 20px;
@@ -198,56 +277,6 @@ h3 {
     background-color: #99E2D0;
     color: #32b091;
     text-align: center;
-  }
-  .restaurants__article .card img {
-    width: 100%;
-    height: 300px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    display: flex;
-    margin: auto;
-    border-radius: 20px 20px 0 0;
-  }
-  .restaurants__article .card figure {
-    margin: 0;
-  }
-  .restaurants__article .card__figcaption {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    width: 100%;
-    display: flex;
-    height: 110px;
-    background-color: white;
-    border-radius: 0 0 20px 20px;
-  }
-  .restaurants__article .card__figcaption div {
-    position: relative;
-    width: 100%;
-    padding-left: 20px;
-  }
-  .restaurants__article .card__figcaption p {
-    font-size: 24px;
-    margin-top: 8px;
-    margin-bottom: 30px;
-    opacity: 0.7;
-  }
-  .restaurants__article .card .fa-heart {
-    position: absolute;
-    font-size: 38px;
-    font-weight: 500;
-  }
-  .restaurants__article .card .fa-heart:hover {
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(#9356DC, #FF79DA);
-    font-weight: bold;
-    color: transparent;
-    transition: color 0.5s ease;
-  }
-  .restaurants__article .fa-heart {
-    right: 45px;
-    bottom: 44px;
   }
 
   footer {
@@ -280,6 +309,84 @@ h3 {
     margin-right: 14px;
     font-size: 16px;
     margin-top: 3px;
+  }
+}
+@media screen and (max-width: 32.5em) {
+  h1 {
+    font-size: 0.8em;
+    width: 75%;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    margin-top: 50px;
+  }
+
+  h3 {
+    padding-top: 18px;
+    font-size: 1.2em;
+  }
+
+  .information__position span {
+    font-size: 1.2em;
+  }
+
+  .information__position p {
+    font-size: 1.2em;
+  }
+
+  .information__navigation__description {
+    font-size: 0.6em;
+    width: 90%;
+  }
+
+  .information__navigation__button {
+    width: 65%;
+    height: 55px;
+    margin-bottom: 60px;
+  }
+  .information__navigation__button p {
+    font-size: 0.6em;
+  }
+
+  .working__btn {
+    width: 80%;
+  }
+  .working__btn p {
+    font-size: 1.1em;
+  }
+
+  .restaurants__article .card img {
+    height: 150px;
+  }
+  .restaurants__article .card__figcaption {
+    height: 80px;
+  }
+  .restaurants__article .card__figcaption p {
+    font-size: 1.1em;
+  }
+  .restaurants__article .card .fa-heart {
+    font-size: 2.1em;
+  }
+
+  .new::before {
+    font-size: 1.1em;
+    width: 22%;
+  }
+
+  footer h2 {
+    font-size: 1.8em;
+  }
+  footer li {
+    font-size: 1.2em;
+  }
+  footer li span {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 48em) {
+  .restaurants__article {
+    flex-direction: row;
   }
 }
 
