@@ -41,6 +41,28 @@ header .fa-arrow-left {
   opacity: 0.77;
 }
 
+@keyframes card-opacity {
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes card-translate {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 h3 {
   font-size: 25px;
   margin-bottom: 0px;
@@ -117,6 +139,9 @@ h3 {
 .menu__article fieldset {
   padding: 0;
   margin-top: 40px;
+  opacity: 0;
+  min-width: 100%;
+  animation: card-opacity 1600ms forwards;
 }
 .menu__article legend {
   display: block;
@@ -134,21 +159,37 @@ h3 {
 .card {
   display: flex;
   background: white;
-  justify-content: stretch;
   align-items: center;
-  margin: 15px auto 10px auto;
+  margin: 15px 0 10px 0;
   padding-left: 4%;
   height: 75px;
   border-radius: 15px;
   box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
   width: 100%;
+  /*&:hover{
+      .fa-solid{
+
+      }
+  }*/
+}
+.card:nth-child(1) {
+  animation: card-translate 1600ms 400ms backwards;
+}
+.card:nth-child(2) {
+  animation: card-translate 1600ms 800ms backwards;
+}
+.card:nth-child(3) {
+  animation: card-translate 1600ms 1200ms backwards;
+}
+.card:nth-child(4) {
+  animation: card-translate 1600ms 1600ms backwards;
 }
 .card__description {
   font-size: 0.9em;
-  min-width: 60%;
+  width: 60%;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card__description h3 {
   margin: 0 0 10px 0;
@@ -181,6 +222,7 @@ h3 {
   width: 20px;
   height: 20px;
 }
+
 .order {
   margin: 35px auto 80px auto;
   color: white;

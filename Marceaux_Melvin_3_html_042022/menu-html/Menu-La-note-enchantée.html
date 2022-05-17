@@ -6,7 +6,7 @@
     <title>Ohmyfood</title>
     <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/reset.css" type="text/css">
     <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/normalize.css" type="text/css"> 
-    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/prefixed/menu.css" type="text/css">    
+    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/menu.css" type="text/css">    
     <script src="https://kit.fontawesome.com/2d2374fe7a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
@@ -29,121 +29,92 @@
           <form method="post" action="#">
             <fieldset>
               <legend>ENTRÉES</legend>
-              <p>
-                <label class="card-label" for="card1">
+              <div class="card">
+                <div class="card__description">
                   <h3>Ravioles de foie gras</h3>
-                  Accompagnés de leur crème à la truffe
-                  <span class="card-label__price">25€</span>
-                </label> 
-              </p>
-              <input type="button" name="raviole" id="card1" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Accompagnés de leur crème à la truffe</p>
+                </div> 
+                <p class="card__price">25€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card2">
-                  <h3>Caviar osciètre</h3>
-                  Sur blini à la farine de blé noir
-                  <span class="card-label__price">35€</span>
-                </label>
-              </p>   
-              <input type="button" name="caviar" id="card2" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
-              </div>
-              <p>
-                <label class="card-label" for="card3">
+              <div>
+                <div class="card">
+                  <div class="card__description">
+                    <h3>Caviar osciètre</h3>
+                    <p>Sur blini à la farine de blé noir</p>
+                  </div>
+                  <p class="card__price">35€</p>
+                  <span class="fa-solid"></span>
+                </div>
+              <div class="card">
+                <div class="card__description">
                   <h3>Homard et espuma de potiron</h3>
-                  Mariné aux zestes d'orange
-                  <span class="card-label__price">20€</span>
-                </label>
-              </p>
-              <input type="button" name="potiron" id="card3" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Mariné aux zestes d'orange</p>
+                </div>
+                <span class="card__price">20€</span>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card4">
+              <div class="card">
+                <div class="card__description">
                   <h3>Foie gras de canard cuit entier</h3>
-                  Confiture de figue et pain toasté
-                  <span class="card-label__price">35€</span>
-                </label>
-              </p>
-            <input type="button" name="foie2" id="card4" class="menu__btn"/>
-            <div class="card-div">
-              <span class="fa-solid fa-check card-div__checkbox"></span>
-            </div>
+                  <p>Confiture de figue et pain toasté</p>
+                </div>
+                <p class="card__price">35€</p>
+                <span class="fa-solid"></span>
+              </div>
             </fieldset>
             <fieldset>
               <legend>PLATS</legend>
-              <p>
-                <label class="card-label" for="card5">
+              <div class="card">
+                <div class="card__description">
                   <h3>Noix de coquilles Saint-Jacques</h3>
-                  Sur lit de purée de céleri-rave
-                  <span class="card-label__price">40€</span>
-                </label>
-              </p>
-              <input type="button" name="coquilles" id="card5" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Sur lit de purée de céleri-rave</p>
+                </div>
+                <p class="card__price">40€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card6">
+              <div class="card">
+                <div class="card__description">
                   <h3>Langoustine poêlée</h3>
-                  Purée de patate douce
-                  <span class="card-label__price">35€</span>
-                </label>
-              </p>
-              <input type="button" name="langoustine" id="card6" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Purée de patate douce</p>
+                </div>
+                <p class="card__price">35€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card7">
+              <div class="card">
+                <div class="card__description">
                   <h3>Mijoté de queue de boeuf</h3>
-                  Et riz sauvage aux zestes de citron
-                  <span class="card-label__price">44€</span>
-                </label>
-              </p>
-              <input type="button" name="queue-de-boeuf" id="card7" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>Et riz sauvage aux zestes de citron</p>
+                </div>
+                <p class="card__price">44€</p>
+                <span class="fa-solid"></span>
               </div>
             </fieldset>
             <fieldset>
               <legend>DESSERTS</legend>
-              <p>
-                <label class="card-label" for="card8">
+              <div class="card">
+                <div class="card__description">
                   <h3>Macaron noisette et chocolat</h3>
-                  Glace au caramel brun et sel de Guérande
-                  <span class="card-label__price">18€</span>
-                </label>
-              </p>
-              <input type="button" name="macaron2" id="card8" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>Glace au caramel brun et sel de Guérande</p>
+                </div>
+                <p class="card__price">18€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card9">
+              <div class="card">
+                <div class="card__description">
                   <h3>Baba au rhum revisité</h3>
-                  Avec son coulis de citron
-                  <span class="card-label__price">22€</span>
-                </label>
-              </p>
-              <input type="button" name="baba-au-rhum" id="card9" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>Avec son coulis de citron</p>
+                </div>
+                <p class="card__price">22€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card10">
+              <div class="card">
+                <div class="card__description">
                   <h3>Tarte au citron meringuée</h3>
-                  Déstructurée
-                  <span class="card-label__price">23€</span>
-                </label>
-              </p>
-              <input type="button" name="citron-meringuee" id="card10" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>Déstructurée</p>
+                </div>
+                <p class="card__price">23€</p>
+                <span class="fa-solid"></span>
               </div>
             </fieldset>
             <input type="submit" value="Commander" class="order"/>

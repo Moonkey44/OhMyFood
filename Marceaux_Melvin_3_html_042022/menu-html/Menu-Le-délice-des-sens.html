@@ -6,7 +6,7 @@
     <title>Ohmyfood</title>
     <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/reset.css" type="text/css">
     <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/normalize.css" type="text/css"> 
-    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/prefixed/menu.css" type="text/css">    
+    <link rel="stylesheet" href="/Marceaux_Melvin_2_style_042022/menu.css" type="text/css">    
     <script src="https://kit.fontawesome.com/2d2374fe7a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
@@ -29,110 +29,83 @@
           <form method="post" action="#">
             <fieldset>
               <legend>ENTRÉES</legend>
-              <p>
-                <label class="card-label" for="card1">
+              <div class="card">
+                <div class="card__description">
                   <h3>Tartare de thon</h3>
-                  Assaisonné au yuzu
-                  <span class="card-label__price">25€</span>
-                </label>
-              </p>  
-              <input type="button" name="tartare2" id="card1" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
-              </div>
-              <p>
-                <label class="card-label" for="card2">
+                  <p>Assaisonné au yuzu</p>               
+                </div>
+                <p class="card__price">25€</p>
+                <span class="fa-solid"></span>
+              </div>  
+              <div class="card">
+                <div class="card__description">
                   <h3>Bouchée de homard croustillant</h3>
-                  Et sa farandole de petits légumes
-                  <span class="card-label__price">35€</span>
-                </label>
-              </p>
-              <input type="button" name="bouchee" id="card2" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Et sa farandole de petits légumes</p>
+                </div>
+                <p class="card__price">35€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card3">
+              <div class="card">
+                <div class="card__description">
                   <h3>Velouté de cèpes</h3>
-                  Aux truffes
-                  <span class="card-label__price">20€</span>
-                </label>
-              </p>
-              <input type="button" name="veloute2" id="card3" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Aux truffes</p>
+                </div>
+                <p class="card__price">20€</p>
+                <span class="fa-solid"></span>
               </div>
             </fieldset>
             <fieldset>
               <legend>PLATS</legend>
-              <p>
-                <label class="card-label" for="card4">
+              <div class="card">
+                <div class="card__description">
                   <h3>Poulet rôti aux herbes de Provence</h3>
-                  Et sa crème de truffe
-                  <span class="card-label__price">40€</span>
-                </label>
-              </p>
-              <input type="button" name="poulet" id="card4" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Et sa crème de truffe</p>
+                </div>
+                <p class="card__price">40€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card5">
+              <div class="card">
+                <div class="card__description">
                   <h3>Langouste rôtie</h3>
-                  Et ses légumes de saison
-                  <span class="card-label__price">35€</span>
-                </label>
-              </p>
-              <input type="button" name="langouste" id="card5" class="menu__btn"/>
-              <div class="card-div">
-                <span class="fa-solid fa-check card-div__checkbox"></span>
+                  <p>Et ses légumes de saison</p>
+                </div>
+                <p class="card__price">35€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card6">
+              <div class="card">
+                <div class="card__description">
                   <h3>Côte de boeuf Angus</h3>
-                  Et sa purée de panais
-                  <span class="card-label__price">44€</span>
-                </label>
-              </p>
-              <input type="button" name="puree-de-panais" id="card6" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>Et sa purée de panais</p>
+                </div>
+                <p class="card__price">44€</p>
+                <span class="fa-solid"></span>
               </div>
             </fieldset>
             <fieldset>
               <legend>DESSERTS</legend>
-              <p>
-                <label class="card-label" for="card7">
+              <div class="card">
+                <div class="card__description">
                   <h3>Farandole de desserts</h3>
-                  Du chef
-                  <span class="card-label__price">18€</span>
-                </label>
-              </p>
-              <input type="button" name="farandoles" id="card7" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>Du chef</p>
+                </div>
+                <p class="card__price">18€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card8">
+              <div class="card">
+                <div class="card__description">
                   <h3>Crème brulée</h3>
-                  Revisitée
-                  <span class="card-label__price">22€</span>
-                </label>
-              </p>
-              <input type="button" name="creme-brulee" id="card8" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>Revisitée</p>
+                </div>
+                <p class="card__price">22€</p>
+                <span class="fa-solid"></span>
               </div>
-              <p>
-                <label class="card-label" for="card9">
+              <div class="card">
+                <div class="card__description">
                   <h3>Tiramisu</h3>
-                  À la noisette
-                  <span class="card-label__price">23€</span>
-                </label>
-              </p>
-              <input type="button" name="tiramisu" id="card9" class="menu__btn"/>
-              <div class="div">
-                <span class="fa-solid fa-check div__checkbox"></span>
+                  <p>À la noisette</p>
+                </div>
+                <p class="card__price">23€</p>
+                <span class="fa-solid"></span>
               </div>
             </fieldset>
             <input type="submit" value="Commander" class="order"/>
