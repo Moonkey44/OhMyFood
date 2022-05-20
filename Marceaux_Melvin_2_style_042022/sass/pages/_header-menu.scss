@@ -1,11 +1,12 @@
 @import "../layouts/header";
 header{
+    align-items: center;
     position: relative;
     .fa-arrow-left{
         position: absolute;
         font-size: 24px;
-        left: 45px;
-        top: 15px;
+        left: 30px;
+        top: 18px;
         opacity: 0.77;
     }
 }

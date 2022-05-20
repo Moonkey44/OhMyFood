@@ -284,18 +284,15 @@ h3 {
     color: white;
     height: 250px;
     padding-top: 30px;
+    padding-left: 7%;
   }
   footer mark {
     color: white;
     font-weight: normal;
   }
   footer h2 {
-    margin-left: 7%;
     margin-top: 0;
     font-size: 27px;
-  }
-  footer ul {
-    margin-left: 7%;
   }
   footer li:first-child {
     margin-left: 6px;

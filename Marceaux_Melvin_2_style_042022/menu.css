@@ -31,35 +31,69 @@ header img {
 }
 
 header {
+  align-items: center;
   position: relative;
 }
 header .fa-arrow-left {
   position: absolute;
   font-size: 24px;
-  left: 45px;
-  top: 15px;
+  left: 30px;
+  top: 18px;
   opacity: 0.77;
 }
 
-@keyframes card-opacity {
-  40% {
+footer {
+  background-color: #333333;
+  color: white;
+  height: 250px;
+  padding-top: 30px;
+  padding-left: 7%;
+}
+footer mark {
+  color: white;
+  font-weight: normal;
+}
+footer h2 {
+  margin-top: 0;
+  font-size: 27px;
+}
+footer li:first-child {
+  margin-left: 6px;
+}
+footer li {
+  margin-bottom: 10px;
+  display: flex;
+  font-size: 23px;
+}
+footer li span {
+  margin-right: 14px;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+@-webkit-keyframes card-translate {
+  0% {
+    transform: translateY(40px);
     opacity: 0;
   }
-  60% {
-    opacity: 0.4;
-  }
-  80% {
-    opacity: 0.8;
+  20% {
+    opacity: 0.2;
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 @keyframes card-translate {
-  from {
-    transform: translateY(30px);
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
   }
-  to {
+  20% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -72,7 +106,7 @@ h3 {
 .background {
   position: relative;
   width: 100%;
-  height: 490px;
+  height: 30em;
   display: flex;
   -o-object-fit: cover;
   object-fit: cover;
@@ -83,7 +117,7 @@ h3 {
   margin-top: -75px;
   width: 100%;
   border-radius: 65px 65px 0 0;
-  background-color: #f0f6ff;
+  background-color: #eaf0fa;
   position: relative;
 }
 .menu header {
@@ -134,20 +168,22 @@ h3 {
 }
 .menu header h2 {
   margin-top: 70px;
-  font-size: 30px;
+  font-size: 1.6em;
+}
+.menu__article {
+  width: 100%;
 }
 .menu__article fieldset {
-  padding: 0;
+  display: inline-block;
   margin-top: 40px;
-  opacity: 0;
-  min-width: 100%;
-  animation: card-opacity 1600ms forwards;
+  width: 100%;
 }
 .menu__article legend {
   display: block;
   border-bottom: #99E2D0 3px solid;
   width: 12%;
   padding-bottom: 5px;
+  font-size: 1em;
 }
 .menu form {
   display: flex;
@@ -161,66 +197,67 @@ h3 {
   background: white;
   align-items: center;
   margin: 15px 0 10px 0;
-  padding-left: 4%;
   height: 75px;
   border-radius: 15px;
   box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
-  width: 100%;
-  /*&:hover{
-      .fa-solid{
-
-      }
-  }*/
-}
-.card:nth-child(1) {
-  animation: card-translate 1600ms 400ms backwards;
-}
-.card:nth-child(2) {
-  animation: card-translate 1600ms 800ms backwards;
-}
-.card:nth-child(3) {
-  animation: card-translate 1600ms 1200ms backwards;
-}
-.card:nth-child(4) {
-  animation: card-translate 1600ms 1600ms backwards;
+  max-width: 100%;
+  overflow: hidden;
 }
 .card__description {
   font-size: 0.9em;
-  width: 60%;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  padding-left: 4%;
+  width: 82%;
 }
 .card__description h3 {
   margin: 0 0 10px 0;
-  font-size: 1.2em;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__description p {
+  display: inline;
+  font-size: 1em;
 }
 .card__price {
-  display: inline-block;
-  text-align: center;
-  padding-top: 30px;
-  width: 21%;
+  font-weight: bold;
+  padding: 30px 0 0 0;
+  margin-left: auto;
+  font-size: 0.9em;
 }
 .card .fa-solid {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 19%;
   height: 100%;
   background-color: white;
   text-align: center;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
   line-height: 20px;
+  width: 20%;
+  margin: 0 -20% 0 1em;
 }
 .card .fa-solid::after {
   content: "\f00c";
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   color: #99E2D0;
   border-radius: 50px;
   width: 20px;
   height: 20px;
+}
+.card:hover .fa-solid {
+  margin-right: 0;
+  transition: margin 600ms;
+}
+.card:hover .fa-solid::after {
+  transform: rotate(1turn);
+  transition: transform 600ms;
 }
 
 .order {
@@ -235,40 +272,139 @@ h3 {
   font-size: 1em;
 }
 
-footer {
-  background-color: #333333;
-  color: white;
-  height: 250px;
-  padding-top: 30px;
-}
-footer mark {
-  color: white;
-  font-weight: normal;
-}
-footer h2 {
-  margin-left: 7%;
-  margin-top: 0;
-  font-size: 27px;
-}
-footer ul {
-  margin-left: 7%;
-}
-footer li:first-child {
-  margin-left: 6px;
-}
-footer li {
-  margin-bottom: 10px;
-  display: flex;
-  font-size: 23px;
-}
-footer li span {
-  margin-right: 14px;
-  font-size: 16px;
-  margin-top: 3px;
-}
-
 footer ul {
   margin-top: 30px;
+}
+
+.anim1 {
+  -webkit-animation: card-translate 1000ms 250ms backwards;
+  animation: card-translate 1000ms 250ms backwards;
+}
+
+.anim2 {
+  -webkit-animation: card-translate 1000ms 500ms backwards;
+  animation: card-translate 1000ms 500ms backwards;
+}
+
+.anim3 {
+  -webkit-animation: card-translate 1000ms 750ms backwards;
+  animation: card-translate 1000ms 750ms backwards;
+}
+
+.anim4 {
+  -webkit-animation: card-translate 1000ms 1000ms backwards;
+  animation: card-translate 1000ms 1000ms backwards;
+}
+
+@media screen and (min-width: 48em) {
+  header {
+    height: 5em;
+  }
+  header .fa-arrow-left {
+    top: 0.7em;
+    left: 2em;
+    font-size: 2em;
+    opacity: 0.77;
+  }
+
+  .menu header {
+    justify-content: space-around;
+  }
+  .menu header h2 {
+    font-size: 2em;
+    margin-left: 23%;
+  }
+  .menu__article fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .menu__article legend {
+    font-size: 1.2em;
+    width: 6.5%;
+  }
+
+  .card {
+    text-align: left;
+    width: 45%;
+    height: 85px;
+    margin-left: 2em;
+    margin-top: 1.5em;
+  }
+  .card:last-child {
+    margin: auto;
+    margin-top: 1.5em;
+  }
+  .card__description h3 {
+    font-size: 1.1em;
+  }
+  .card__description p {
+    font-size: 1.1em;
+  }
+  .card__price {
+    font-size: 1em;
+  }
+  .card .fa-solid {
+    width: 27%;
+    margin-right: -27%;
+  }
+
+  .order {
+    width: 32%;
+  }
+}
+@media screen and (min-width: 80em) {
+  .menu header h2 {
+    font-size: 2.5em;
+  }
+  .menu header .fa-heart {
+    font-size: 3em;
+  }
+  .menu__article fieldset {
+    margin-top: 4em;
+  }
+  .menu__article legend {
+    font-size: 1.5em;
+    width: 5.5%;
+  }
+
+  .card {
+    width: 45%;
+    height: 6em;
+    margin-top: 2em;
+  }
+  .card__description h3 {
+    font-size: 1.5em;
+  }
+  .card__description p {
+    font-size: 1.4em;
+  }
+  .card__price {
+    font-size: 1.2em;
+  }
+  .card .fa-solid {
+    width: 18%;
+    margin-right: -18%;
+  }
+  .card .fa-solid::after {
+    font-size: 1.3em;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .order {
+    width: 27%;
+    font-size: 1.5em;
+    margin-top: 3em;
+    height: 2.5em;
+  }
+
+  footer h2 {
+    font-size: 2.3em;
+  }
+  footer ul {
+    font-size: 2.3em;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
