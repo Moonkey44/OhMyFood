@@ -1,26 +1,25 @@
-@import "../base/mixin";
+@import "../utils/_mixin.scss";
 
 &__navigation{
     width: 100%;
-    font-size: 30px; 
     text-align: center;
     &__description{
-        opacity: 0.6;
-        font-size: 30px;
-        width: 80%;
+        opacity: 0.7;
+        font-size: 1em;
+        width: 95%;
         margin: 0 auto 40px auto;
     }
     &__button{
         display: flex;
         opacity: 0.9;
-        height: 75px;
-        width:50%;
+        height: 8vh;
+        width:70%;
         justify-content: center;
         align-items: center;      
-        margin: 0 auto 70px auto;
+        margin: 0 auto 60px auto;
         @include button;
         p{
-            font-size: 25px;
+            font-size: 1em;
         }
     }
 }

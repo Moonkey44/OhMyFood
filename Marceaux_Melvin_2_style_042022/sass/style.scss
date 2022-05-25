@@ -1,0 +1,59 @@
+@import "./base/_base.scss";
+@import "./utils/_variables.scss";
+
+h1{
+    width: 70%;
+    text-align: center;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 50px auto 20px auto;
+}
+
+h2{
+    font-size: 1.3em;
+    width: 60%;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-left: 8%;
+}
+
+h3
+{
+    font-size: 1em;
+    margin-bottom: 0px;
+    padding-top: 18px;
+}
+
+@import "./layouts/_header.scss";
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lighten($color: #DEEBFF, $amount: 3.5%);
+    @import "./components/_position.scss";
+    @import "./components/_navigation.scss";     
+}
+
+.working{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 30px 0;
+    @import "./components/_buttons.scss";
+}
+.restaurants{
+    background-color: lighten($color: #DEEBFF, $amount: 3.5%);
+    &__header{
+        justify-content: left;
+    }
+    &__article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+        @import "./components/_card.scss";
+    }
+}
+@import "./components/_new.scss";
+@import "./layouts/_footer.scss";
+

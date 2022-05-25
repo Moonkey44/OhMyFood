@@ -1,8 +1,8 @@
-@import "./base/_base";
-@import "./base/mixin";
-@import "./utils/variables";
-@import "./pages/header-menu";
-@import "./layouts/footer";
+@import "../base/_base.scss";
+@import "../utils/_mixin.scss";
+@import "../utils/_variables.scss";
+@import "../layouts/_header.scss";
+@import "../layouts/_footer.scss";
 
 @-webkit-keyframes card-translate{
     0%{   
@@ -39,10 +39,22 @@ h3
     margin-top: 25px;
 }
 
+header{
+    align-items: center;
+    position: relative;
+    .fa-arrow-left{
+        position: absolute;
+        font-size: 24px;
+        left: 30px;
+        top: 18px;
+        opacity: 0.77;
+    }
+}
+
 .background{
     position: relative;
     width: 100%;
-    height: 30em;
+    height: 45vh;
     display: flex;
     -o-object-fit:cover;
        object-fit:cover;
@@ -58,8 +70,9 @@ h3
     header{
         justify-content: left;
         width: 90%;
+        max-width: 400px;
         margin: auto;
-        @import "./components/heart";
+        @import "../components/_heart.scss";
         .fa-heart::after{
             top: 60%;
         }
@@ -79,7 +92,8 @@ h3
         fieldset{
             display: inline-block;
             margin-top: 40px;
-            width: 100%;
+            min-width: 100%;
+            padding: 0;
         }
         legend{
             display: block;
@@ -93,6 +107,7 @@ h3
         display: flex;
         flex-direction: column;
         width: 90%;
+        max-width: 400px;
         margin: auto;
     }
 }
@@ -105,7 +120,7 @@ h3
     height: 75px;
     border-radius: 15px;
     box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
-    max-width: 100%;
+    width: 100%;
     overflow: hidden;
     &__description{
         font-size: 0.9em;
@@ -160,7 +175,7 @@ h3
             margin-right: 0; 
             transition: margin 600ms;
             &::after{
-                transform: rotate(1turn);
+                transform: rotate(2turn);
                 transition: transform 600ms;
             }
         }
@@ -206,10 +221,12 @@ footer ul{
             font-size: 2em;
             opacity: 0.77;
         }
+        
     }
     .menu{
         header{
             justify-content: space-around;
+            max-width: 800px;
             h2{
                 font-size: 2em;
                 margin-left: 23%;
@@ -220,23 +237,24 @@ footer ul{
                 display: flex;
                 flex-wrap: wrap;
                 text-align: center;
+                justify-content: space-around;
             }
             legend{
                 font-size: 1.2em;
                 width: 6.5%;
+                display: block;
+            }
+            form{
+                max-width: 800px;
             }
         }
     }
     .card{
         text-align: left;
         width: 45%;
+        max-width: 440px;
         height: 85px;
-        margin-left: 2em;
         margin-top: 1.5em;
-        &:last-child{
-            margin: auto;
-            margin-top: 1.5em;
-        }
         &__description{
             h3{
                 font-size: 1.1em;
@@ -259,17 +277,33 @@ footer ul{
     }
 }
 
+.last-card{
+    margin-right: 50%;
+}
+
 @media screen and (min-width:80em) {
+    .background{
+        height: 70vh;
+    }
     .menu{
         header{
+            max-width: 1440px;
             h2{
                 font-size: 2.5em;
             }
             .fa-heart{
-                font-size: 3em;
+                font-size: 2.8em;
+            }
+            .fa-heart::after{
+                margin-right: 10%;
+            }
+            .fa-heart::before{
+                margin-right: 10%;
             }
         }
         &__article{
+            max-width: 1440px;
+            margin: auto;
             fieldset{
                 margin-top: 4em;
             }
@@ -277,30 +311,33 @@ footer ul{
                 font-size: 1.5em;
                 width: 5.5%;
             }
+            form{
+                width: 70%;
+                max-width: 1440px;
+            }
         }
     }
     .card{
-        width: 45%;
         height: 6em;
         margin-top: 2em;
         &__description{
             h3{
-                font-size: 1.5em;
+                font-size: 1.3em;
             }
             p{
-                font-size: 1.4em;
+                font-size: 1.2em;
             }
         }
         &__price{
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
         .fa-solid{
             width: 18%;
             margin-right: -18%;
             &::after{
-                font-size: 1.3em;
-                width: 1.5em;
-                height:1.5em;
+                font-size: 1.2em;
+                width: 1.3em;
+                height:1.3em;
             }
         }
     }

@@ -30,18 +30,6 @@ header img {
   width: 50%;
 }
 
-header {
-  align-items: center;
-  position: relative;
-}
-header .fa-arrow-left {
-  position: absolute;
-  font-size: 24px;
-  left: 30px;
-  top: 18px;
-  opacity: 0.77;
-}
-
 footer {
   background-color: #333333;
   color: white;
@@ -52,23 +40,29 @@ footer {
 footer mark {
   color: white;
   font-weight: normal;
+  padding-left: 0;
 }
 footer h2 {
   margin-top: 0;
-  font-size: 27px;
+  font-size: 1.4em;
+  margin-left: 0;
 }
 footer li:first-child {
-  margin-left: 6px;
+  margin-left: 5px;
 }
 footer li {
   margin-bottom: 10px;
   display: flex;
-  font-size: 23px;
+  font-size: 1em;
 }
 footer li span {
-  margin-right: 14px;
-  font-size: 16px;
-  margin-top: 3px;
+  margin-right: 8px;
+  font-size: 0.8em;
+}
+footer .fa-handshake-angle {
+  transform: rotate(-12deg);
+  margin-left: 2px;
+  font-size: 0.7em;
 }
 
 @-webkit-keyframes card-translate {
@@ -103,10 +97,22 @@ h3 {
   margin-top: 25px;
 }
 
+header {
+  align-items: center;
+  position: relative;
+}
+header .fa-arrow-left {
+  position: absolute;
+  font-size: 24px;
+  left: 30px;
+  top: 18px;
+  opacity: 0.77;
+}
+
 .background {
   position: relative;
   width: 100%;
-  height: 30em;
+  height: 45vh;
   display: flex;
   -o-object-fit: cover;
   object-fit: cover;
@@ -123,6 +129,7 @@ h3 {
 .menu header {
   justify-content: left;
   width: 90%;
+  max-width: 400px;
   margin: auto;
 }
 .menu header .fa-heart {
@@ -176,7 +183,8 @@ h3 {
 .menu__article fieldset {
   display: inline-block;
   margin-top: 40px;
-  width: 100%;
+  min-width: 100%;
+  padding: 0;
 }
 .menu__article legend {
   display: block;
@@ -189,6 +197,7 @@ h3 {
   display: flex;
   flex-direction: column;
   width: 90%;
+  max-width: 400px;
   margin: auto;
 }
 
@@ -200,7 +209,7 @@ h3 {
   height: 75px;
   border-radius: 15px;
   box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
 }
 .card__description {
@@ -256,7 +265,7 @@ h3 {
   transition: margin 600ms;
 }
 .card:hover .fa-solid::after {
-  transform: rotate(1turn);
+  transform: rotate(2turn);
   transition: transform 600ms;
 }
 
@@ -264,12 +273,16 @@ h3 {
   margin: 35px auto 80px auto;
   color: white;
   border-radius: 40px;
-  box-shadow: 0px 5px 5px 2px rgba(207, 203, 203, 0.75);
+  box-shadow: 0px 5px 5px 2px rgba(207, 203, 203, 0.7019607843);
   background-image: linear-gradient(#FF79DA, #9356DC);
   border: none;
   width: 60%;
   height: 50px;
   font-size: 1em;
+}
+.order:hover {
+  background-image: linear-gradient(#ff88de, #9b63df);
+  box-shadow: 0px 5px 5px 2px rgb(207, 203, 203);
 }
 
 footer ul {
@@ -309,6 +322,7 @@ footer ul {
 
   .menu header {
     justify-content: space-around;
+    max-width: 800px;
   }
   .menu header h2 {
     font-size: 2em;
@@ -318,21 +332,22 @@ footer ul {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    justify-content: space-around;
   }
   .menu__article legend {
     font-size: 1.2em;
     width: 6.5%;
+    display: block;
+  }
+  .menu__article form {
+    max-width: 800px;
   }
 
   .card {
     text-align: left;
     width: 45%;
+    max-width: 440px;
     height: 85px;
-    margin-left: 2em;
-    margin-top: 1.5em;
-  }
-  .card:last-child {
-    margin: auto;
     margin-top: 1.5em;
   }
   .card__description h3 {
@@ -353,12 +368,33 @@ footer ul {
     width: 32%;
   }
 }
+.last-card {
+  margin-right: 50%;
+}
+
 @media screen and (min-width: 80em) {
+  .background {
+    height: 70vh;
+  }
+
+  .menu header {
+    max-width: 1440px;
+  }
   .menu header h2 {
     font-size: 2.5em;
   }
   .menu header .fa-heart {
-    font-size: 3em;
+    font-size: 2.8em;
+  }
+  .menu header .fa-heart::after {
+    margin-right: 10%;
+  }
+  .menu header .fa-heart::before {
+    margin-right: 10%;
+  }
+  .menu__article {
+    max-width: 1440px;
+    margin: auto;
   }
   .menu__article fieldset {
     margin-top: 4em;
@@ -367,29 +403,32 @@ footer ul {
     font-size: 1.5em;
     width: 5.5%;
   }
+  .menu__article form {
+    width: 70%;
+    max-width: 1440px;
+  }
 
   .card {
-    width: 45%;
     height: 6em;
     margin-top: 2em;
   }
   .card__description h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .card__description p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .card__price {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .card .fa-solid {
     width: 18%;
     margin-right: -18%;
   }
   .card .fa-solid::after {
-    font-size: 1.3em;
-    width: 1.5em;
-    height: 1.5em;
+    font-size: 1.2em;
+    width: 1.3em;
+    height: 1.3em;
   }
 
   .order {

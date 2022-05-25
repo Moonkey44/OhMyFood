@@ -1,65 +1,50 @@
-$content-btn:"\f3cd","\f0c9","\f54e";
-
 &__btn{
     display: flex;
     align-items: center;
     background: lighten($color: #DEEBFF, $amount: 3.5%);
     border: none;
-    height: 100px;
-    width: 70%;
+    height: 4.5em;
+    width: 85%;
     margin-bottom: 10px;
     margin-top: 10px;
-    border-radius: 24px;
+    border-radius: 20px;
     box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
+    font-size: 0.9em;
     p{
-        text-align: center;
+        text-align: left;
         font-weight: bold;
-        font-size: 21px;
     }
     .btn-label{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 27%;
+        width: 28%;
         position: relative;
         &__num{   
             position: absolute;
             background: $color-primary;
-            font-size: 18px;
             color: white;
-            width: 28px;
-            height:28px;
+            width: 25px;
+            height:25px;
             border-radius: 14px;
-            line-height: 28px;
+            line-height: 26px;
             text-align: center;
             left: -14px;
         }
         &__icon{
             opacity: 0.5;
             color: black;
-            font-size: 23px;
-            margin-top: 2px;
+            font-size: 1.2em;
             &:nth-child(2){
                 position: absolute;
                 ::before{
                     content: "\f142";
-                    margin-right: 0.1em;
-                    font-size: 21px;
+                    margin-right: 0.1em;  
                 }
                 ::after{
                     content: "\f0c9";
-                    font-size: 21px;
-                    
                 }
             }          
         }  
     }
-    &:active .btn-label__icon{
-        color: $color-primary;
-        opacity: 1;
-    }
-    &:focus .btn-label__icon{
-        color: $color-primary;
-        opacity: 1;
-    } 
 }

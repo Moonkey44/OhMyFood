@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass" : "sass --watch ./Marceaux_Melvin_2_style_042022/sass/index.scss:./Marceaux_Melvin_2_style_042022/index.css --watch ./Marceaux_Melvin_2_style_042022/sass/menu.scss:./Marceaux_Melvin_2_style_042022/menu.css --style expanded",
-    "prefix": "postcss ./Marceaux_Melvin_2_style_042022/index.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022/prefixed",
-    "prefix-menu": "postcss ./Marceaux_Melvin_2_style_042022/menu.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022/prefixed/"
+    "sass": "sass --watch ./Marceaux_Melvin_2_style_042022/sass/style.scss:./Marceaux_Melvin_2_style_042022/style.css --watch ./Marceaux_Melvin_2_style_042022/sass/pages/menu.scss:./Marceaux_Melvin_2_style_042022/menu.css --style expanded",
+    "prefix": "postcss ./Marceaux_Melvin_2_style_042022/style.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022",
+    "prefix-menu": "postcss ./Marceaux_Melvin_2_style_042022/menu.css --use autoprefixer -d ./Marceaux_Melvin_2_style_042022"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,5 @@
   "bugs": {
     "url": "https://github.com/Moonkey44/P3_Oh_My_Food_Marceaux_Melvin/issues"
   },
-  "homepage": "https://github.com/Moonkey44/P3_Oh_My_Food_Marceaux_Melvin#readme",
-  "browserslist": "last 4 versions"
+  "homepage": "https://github.com/Moonkey44/P3_Oh_My_Food_Marceaux_Melvin#readme"
 }
