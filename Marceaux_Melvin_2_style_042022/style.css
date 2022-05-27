@@ -63,27 +63,27 @@ body {
 }
 
 @keyframes loader-shadow {
-  from {
+  0% {
     box-shadow: 0 0 0 #9356DC, 0 0 0 #99E2D0, 0 0 0 #FF79DA, 0 0 0 #99E2D0;
   }
-  to {
+  100% {
     box-shadow: 0 -8px 0 #9356DC, -8px 0 0 #99E2D0, 0 8px 0 #FF79DA, 8px 0 0 #99E2D0;
   }
 }
 @keyframes loader-spinning {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
 @keyframes loader-closing {
-  from {
+  0% {
     transform: translateY(0);
     opacity: 1;
   }
-  to {
+  100% {
     opacity: 0;
     transform: translateY(-100vh);
   }

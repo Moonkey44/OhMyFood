@@ -25,14 +25,14 @@
 }
 
 @keyframes loader-shadow{
-    from{
+    0%{
         box-shadow: 
         0 0 0 $color-primary,
         0 0 0 $color-tertiary,
         0 0 0 $color-secondary,
         0 0 0 $color-tertiary;
     }
-    to{
+    100%{
         box-shadow: 
         0 -8px 0 $color-primary,
         -8px 0 0 $color-tertiary,
@@ -42,20 +42,20 @@
 }
 
 @keyframes loader-spinning {
-    from{
+    0%{
         transform: rotate(0deg);
     }
-    to{
+    100%{
         transform:rotate(360deg);
     }
 }
 
 @keyframes loader-closing{
-    from{
+    0%{
         transform:translateY(0);
         opacity:1;
     }
-    to{
+    100%{
         opacity: 0;
         transform:translateY(-100vh);
     }
