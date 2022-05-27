@@ -14,7 +14,10 @@ h3
     font-size: 1em;
     margin-bottom: 0px;
 }
-
+body{
+    position: relative;
+}
+@import "./components/_loader.scss";
 @import "./layouts/_header.scss";
 
 section:nth-child(2) header, section:last-child header{
@@ -161,11 +164,6 @@ section:nth-child(2) header, section:last-child header{
     }
 }
 
-@media screen and (min-width:1020px) {
-    section:nth-child(2){
-        
-    }
-}
 @media screen and (min-width:1280px) {  
     .working{
         margin-left: auto;
