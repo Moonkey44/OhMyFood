@@ -180,16 +180,16 @@ header .fa-arrow-left {
   opacity: 1;
 }
 .menu header .fa-heart::after {
-  top: 60%;
+  top: 55%;
 }
 .menu header .fa-heart::before {
-  top: 60%;
+  top: 55%;
 }
 .menu header .fa-heart {
-  font-size: 40px;
+  font-size: 35px;
 }
 .menu header h2 {
-  margin-top: 70px;
+  padding-top: 70px;
   font-size: 1.6em;
 }
 .menu__article {
@@ -197,7 +197,7 @@ header .fa-arrow-left {
 }
 .menu__article fieldset {
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 20px;
   min-width: 100%;
   padding: 0;
 }

@@ -74,16 +74,16 @@ header{
         margin: auto;
         @import "../components/_heart.scss";
         .fa-heart::after{
-            top: 60%;
+            top: 55%;
         }
         .fa-heart::before{
-            top: 60%;
+            top: 55%;
         }
         .fa-heart{
-            font-size: 40px;
+            font-size: 35px;
         }
         h2{
-            margin-top: 70px;
+            padding-top: 70px;
             font-size: 1.6em;
         }
     }
@@ -91,7 +91,7 @@ header{
         width: 100%;
         fieldset{
             display: inline-block;
-            margin-top: 40px;
+            margin-top: 20px;
             min-width: 100%;
             padding: 0;
         }
