@@ -1,25 +1,22 @@
-@import "../utils/_mixin.scss";
-
 &__navigation{
     width: 100%;
-    text-align: center;
-    &__description{
-        opacity: 0.7;
-        font-size: 1em;
-        width: 95%;
-        margin: 0 auto 40px auto;
-    }
+    font-size: 1em;
     &__button{
         display: flex;
         opacity: 0.9;
-        height: 8vh;
+        height: 60px;
         width:70%;
+        max-width: 300px;
         justify-content: center;
         align-items: center;      
         margin: 0 auto 60px auto;
         @include button;
-        p{
-            font-size: 1em;
-        }
+    }
+}
+
+@media screen and (min-width:520px) {
+    &__navigation{
+        width: 85%;
+        font-size: 1.3em;
     }
 }

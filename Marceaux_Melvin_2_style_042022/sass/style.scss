@@ -1,37 +1,49 @@
 @import "./base/_base.scss";
 @import "./utils/_variables.scss";
-
-h1{
-    width: 70%;
-    text-align: center;
-    font-size: 1.3em;
-    text-align: center;
-    margin: 50px auto 20px auto;
-}
+@import "./utils/_mixin.scss";
 
 h2{
     font-size: 1.3em;
-    width: 60%;
-    margin-bottom: 30px;
-    margin-top: 60px;
-    margin-left: 8%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 h3
 {
     font-size: 1em;
     margin-bottom: 0px;
-    padding-top: 18px;
 }
 
 @import "./layouts/_header.scss";
+
+section:nth-child(2) header, section:last-child header{
+    display: flex;
+    justify-content: left;
+    h2{
+        text-align: left;
+        margin-left: 8%;
+    }
+}
+
 .information{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: lighten($color: #DEEBFF, $amount: 3.5%);
     @import "./components/_position.scss";
-    @import "./components/_navigation.scss";     
+    header{
+        width: 85%;
+        max-width:260px;
+    }
+    @import "./components/_navigation.scss";
+    &__description{
+        opacity: 0.7;
+        width: 95%;
+        max-width: 320px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+    } 
 }
 
 .working{
@@ -39,12 +51,16 @@ h3
     flex-direction: column;
     align-items: center;
     padding: 0 0 30px 0;
+    max-width: 1280px;
     @import "./components/_buttons.scss";
 }
 .restaurants{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     background-color: lighten($color: #DEEBFF, $amount: 3.5%);
     &__header{
-        justify-content: left;
+        min-width: 100%;
     }
     &__article{
         display: flex;
@@ -57,3 +73,102 @@ h3
 @import "./components/_new.scss";
 @import "./layouts/_footer.scss";
 
+@media screen and (min-width:474px){
+    section:nth-child(2) header{
+        justify-content: center;
+        h2{
+            margin-left: 0;
+            margin-right: 230px;
+        }
+    } 
+    section:last-child header{
+        justify-content: center;
+        h2{
+            margin-left: 0;
+            margin-right: 260px;
+        }
+    }
+}
+
+@media screen and (min-width:520px){
+    h3{
+        font-size: 1.4em;
+    }
+    h2{
+        font-size: 1.6em;
+    }
+    section:nth-child(2) header{
+        h2{
+            margin-right: 180px;
+        }
+    } 
+    section:last-child header{
+        h2{
+            margin-right: 230px;
+        }
+    }
+    .information{
+        header{
+            max-width: 340px;
+        }
+        &__description{
+            font-size: 1.2em;
+            max-width: 460px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    h2{
+        font-size: 1.8em;
+    }
+    section:nth-child(2){
+        padding-bottom: 30px;
+        header h2{
+            margin-right: 0;
+        }
+    } 
+    section:last-child header{
+        h2{
+            margin-right: 0;
+        }
+    }
+    .information{
+        header{
+            max-width: none;
+        }
+        &__description{
+            font-size: 1.6em;
+            max-width: none;
+        }
+    }
+    .working{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+    .restaurants{
+        &__header{
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        &__article{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media screen and (min-width:1020px) {
+    section:nth-child(2){
+        
+    }
+}
+@media screen and (min-width:1280px) {  
+    .working{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

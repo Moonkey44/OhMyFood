@@ -1,15 +1,18 @@
+
 &__btn{
     display: flex;
     align-items: center;
-    background: lighten($color: #DEEBFF, $amount: 3.5%);
+    background: $color-button;
     border: none;
     height: 4.5em;
     width: 85%;
+    max-width: 400px;
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
+    box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.65);
     font-size: 0.9em;
+    margin: 10px 15px 10px 15px;
     p{
         text-align: left;
         font-weight: bold;
@@ -46,5 +49,54 @@
                 }
             }          
         }  
+    }
+    &:hover{
+        background: lighten($color-button,1%);
+        box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 1);
+        .btn-label{
+            &__icon{
+                color:$color-primary;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:520px) {
+    &__btn{
+        font-size: 1.2em;
+    }
+    .btn-label{
+        width: 25%;
+        &__num{
+            font-size: 1em;
+        }
+        &__icon{
+            font-size: 1.3em;
+            margin-top: 1px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    &__btn{
+        max-width: 310px;
+        &:last-child{
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (min-width:1020px) {
+    &__btn{
+        &:last-child{
+            margin: 0;
+        }
+    }
+}
+
+@media screen  and (min-width:1280px){
+    &__btn{
+        max-width: 380px;
     }
 }
