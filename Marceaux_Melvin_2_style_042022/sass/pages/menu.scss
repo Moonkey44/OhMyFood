@@ -195,9 +195,10 @@ footer ul{
     margin-top:30px;
 }
 
+
 .anim1{
     -webkit-animation: card-translate 1000ms 250ms backwards;
-            animation: card-translate 1000ms 250ms backwards;   
+            animation: card-translate 1000ms 250ms backwards;
 }
 .anim2{
     -webkit-animation: card-translate 1000ms 500ms backwards;
@@ -211,6 +212,27 @@ footer ul{
     -webkit-animation: card-translate 1000ms 1000ms backwards;
             animation: card-translate 1000ms 1000ms backwards;
 }
+.anim5{
+    animation: card-translate 1000ms 1250ms backwards;
+}
+.anim6{
+    animation: card-translate 1000ms 1500ms backwards;
+}
+.anim7{
+    animation: card-translate 1000ms 1750ms backwards;
+}
+.anim8{
+    animation: card-translate 1000ms 2000ms backwards;
+}
+.anim9{
+    animation: card-translate 1000ms 2250ms backwards;
+}
+.anim10{
+    animation: card-translate 1000ms 2500ms backwards;
+}
+
+
+
 
 @media screen and (min-width: 768px) {
     header{
