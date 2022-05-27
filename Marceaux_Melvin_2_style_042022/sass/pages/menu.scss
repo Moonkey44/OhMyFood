@@ -74,17 +74,17 @@ header{
         margin: auto;
         @import "../components/_heart.scss";
         .fa-heart::after{
-            top: 55%;
+            top: 53%;
         }
         .fa-heart::before{
-            top: 55%;
+            top: 53%;
         }
         .fa-heart{
             font-size: 35px;
         }
         h2{
             padding-top: 70px;
-            font-size: 1.6em;
+            font-size: 1.4em;
         }
     }
     &__article{
@@ -228,7 +228,7 @@ footer ul{
             max-width: 800px;
             h2{
                 font-size: 2em;
-                margin-left: 23%;
+                text-align: center;
             }
         }
         &__article{
@@ -295,9 +295,11 @@ footer ul{
             }
             .fa-heart::after{
                 margin-right: 10%;
+                top: 48%;
             }
             .fa-heart::before{
                 margin-right: 10%;
+                top: 48%;
             }
         }
         &__article{

@@ -180,17 +180,17 @@ header .fa-arrow-left {
   opacity: 1;
 }
 .menu header .fa-heart::after {
-  top: 55%;
+  top: 53%;
 }
 .menu header .fa-heart::before {
-  top: 55%;
+  top: 53%;
 }
 .menu header .fa-heart {
   font-size: 35px;
 }
 .menu header h2 {
   padding-top: 70px;
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 .menu__article {
   width: 100%;
@@ -338,7 +338,7 @@ footer ul {
   }
   .menu header h2 {
     font-size: 2em;
-    margin-left: 23%;
+    text-align: center;
   }
   .menu__article fieldset {
     display: flex;
@@ -400,9 +400,11 @@ footer ul {
   }
   .menu header .fa-heart::after {
     margin-right: 10%;
+    top: 48%;
   }
   .menu header .fa-heart::before {
     margin-right: 10%;
+    top: 48%;
   }
   .menu__article {
     max-width: 1440px;
