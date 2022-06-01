@@ -40,6 +40,7 @@ a {
 }
 .loader p {
   position: absolute;
+  opacity: 0.9;
 }
 
 @keyframes loader-shadow {
