@@ -46,4 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+a{
+    color: inherit;
+}
+mark{
+    background-color: inherit;
+}

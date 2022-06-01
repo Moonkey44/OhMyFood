@@ -1,3 +1,4 @@
+//Importations des éléments dont j'ai besoin
 @import "../base/_base.scss";
 @import "../utils/_mixin.scss";
 @import "../utils/_variables.scss";
@@ -17,7 +18,7 @@
         transform: translateY(0);
     }
 }
-
+//Animations d'apparition de mes plats
 @keyframes card-translate{
     0%{   
         transform: translateY(40px);
@@ -51,6 +52,7 @@ header{
     }
 }
 
+//Je change l'index de mon background en le plaçant en second plan
 .background{
     position: relative;
     width: 100%;
@@ -72,6 +74,7 @@ header{
         width: 90%;
         max-width: 400px;
         margin: auto;
+        //Importation du coeur pour le menu
         @import "../components/_heart.scss";
         .fa-heart::after{
             top: 53%;
@@ -111,7 +114,7 @@ header{
         margin: auto;
     }
 }
-
+//Configuration de mon animation de sélection par un overflow de mon bloc
 .card{
     display: flex;
     background: white;
@@ -122,6 +125,7 @@ header{
     box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
     width: 100%;
     overflow: hidden;
+    //Le contenu du bloc description sera rogné par des points de supsensions et ne passera pas a la ligne. 
     &__description{
         font-size: 0.9em;
         overflow: hidden;
@@ -136,6 +140,7 @@ header{
             text-overflow: ellipsis;
         }
         p{
+            //Le "display:inline" du paragraphe est important pour le rognage du contenu
             display: inline;
             font-size: 1em;
         }
@@ -181,7 +186,7 @@ header{
         }
     }
 }
-
+//Configuration du boutton d'envoie de formulaire
 .order{
     margin: 35px auto 80px auto;
     @include button;
@@ -195,7 +200,7 @@ footer ul{
     margin-top:30px;
 }
 
-
+//Animations d'apparition de mes plats en jouant sur leurs délais 
 .anim1{
     -webkit-animation: card-translate 1000ms 250ms backwards;
             animation: card-translate 1000ms 250ms backwards;
@@ -213,24 +218,31 @@ footer ul{
             animation: card-translate 1000ms 1000ms backwards;
 }
 .anim5{
-    animation: card-translate 1000ms 1250ms backwards;
+    -webkit-animation: card-translate 1000ms 1250ms backwards;
+            animation: card-translate 1000ms 1250ms backwards;
 }
 .anim6{
-    animation: card-translate 1000ms 1500ms backwards;
+    -webkit-animation: card-translate 1000ms 1500ms backwards;
+            animation: card-translate 1000ms 1500ms backwards;
 }
 .anim7{
-    animation: card-translate 1000ms 1750ms backwards;
+    -webkit-animation: card-translate 1000ms 1750ms backwards;
+            animation: card-translate 1000ms 1750ms backwards;
 }
 .anim8{
-    animation: card-translate 1000ms 2000ms backwards;
+    -webkit-animation: card-translate 1000ms 2000ms backwards;
+            animation: card-translate 1000ms 2000ms backwards;
 }
 .anim9{
-    animation: card-translate 1000ms 2250ms backwards;
+    -webkit-animation: card-translate 1000ms 2250ms backwards;
+            animation: card-translate 1000ms 2250ms backwards;
 }
 .anim10{
-    animation: card-translate 1000ms 2500ms backwards;
+    -webkit-animation: card-translate 1000ms 2500ms backwards;
+            animation: card-translate 1000ms 2500ms backwards;
 }
 
+//Partie media queries de ma page de menu - tablette
 @media screen and (min-width: 768px) {
     header{
         .fa-arrow-left{
@@ -254,13 +266,13 @@ footer ul{
             fieldset{
                 display: flex;
                 flex-wrap: wrap;
-                text-align: center;
                 justify-content: space-around;
             }
             legend{
+                margin: auto;
                 font-size: 1.2em;
-                width: 6.5%;
-                display: block;
+                width:max-content;
+                
             }
             form{
                 max-width: 800px;
@@ -299,6 +311,7 @@ footer ul{
     margin-right: 50%;
 }
 
+//Partie media queries de ma page de menu - desktop
 @media screen and (min-width:1280px) {
     .background{
         height: 65vh;

@@ -1,4 +1,4 @@
-
+// Configuration de mes bouttons pour la section "Fonctionnement"
 &__btn{
     display: flex;
     align-items: center;
@@ -17,6 +17,7 @@
         text-align: left;
         font-weight: bold;
     }
+    //J'ai rassemblé le numéro avec son icône dans une div pour mieux agir sur le contenu du boutton
     .btn-label{
         display: flex;
         justify-content: center;
@@ -34,6 +35,7 @@
             text-align: center;
             left: -14px;
         }
+        //Configuration de l'icône du 2ème boutton par pseudo-éléments pour une meilleur gestion de celle-ci
         &__icon{
             opacity: 0.5;
             color: black;
@@ -50,6 +52,8 @@
             }          
         }  
     }
+
+    //Eclaircissement du background + augmentation de l'ombre portée au survol
     &:hover{
         background: lighten($color-button,1%);
         box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 1);
@@ -62,6 +66,7 @@
     }
 }
 
+//Partie media-queries du boutton
 @media screen and (min-width:520px) {
     &__btn{
         font-size: 1.2em;

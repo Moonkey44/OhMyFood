@@ -1,6 +1,11 @@
+//Importations des layout,components,utils et ma base pour ma page d'acceuil 
 @import "./base/_base.scss";
 @import "./utils/_variables.scss";
 @import "./utils/_mixin.scss";
+@import "./components/_loader.scss";
+@import "./layouts/_header.scss";
+@import "./components/_new.scss";
+@import "./layouts/_footer.scss";
 
 h2{
     font-size: 1.3em;
@@ -17,18 +22,8 @@ h3
 body{
     position: relative;
 }
-@import "./components/_loader.scss";
-@import "./layouts/_header.scss";
 
-section:nth-child(2) header, section:last-child header{
-    display: flex;
-    justify-content: left;
-    h2{
-        text-align: left;
-        margin-left: 8%;
-    }
-}
-
+//Section information
 .information{
     display: flex;
     flex-direction: column;
@@ -39,7 +34,6 @@ section:nth-child(2) header, section:last-child header{
         width: 85%;
         max-width:260px;
     }
-    @import "./components/_navigation.scss";
     &__description{
         opacity: 0.7;
         width: 95%;
@@ -47,8 +41,10 @@ section:nth-child(2) header, section:last-child header{
         margin: 0 auto 40px auto;
         text-align: center;
     } 
+    @import "./components/_navigation.scss";
 }
 
+//Bloc Fonctionnement
 .working{
     display: flex;
     flex-direction: column;
@@ -57,6 +53,7 @@ section:nth-child(2) header, section:last-child header{
     max-width: 1280px;
     @import "./components/_buttons.scss";
 }
+//Bloc pour mes articles de restaurant
 .restaurants{
     display: flex;
     flex-direction: column;
@@ -73,9 +70,8 @@ section:nth-child(2) header, section:last-child header{
         @import "./components/_card.scss";
     }
 }
-@import "./components/_new.scss";
-@import "./layouts/_footer.scss";
 
+//Partie media queries - ajustement de mes titres de section
 @media screen and (min-width:474px){
     section:nth-child(2) header{
         justify-content: center;
@@ -92,7 +88,7 @@ section:nth-child(2) header, section:last-child header{
         }
     }
 }
-
+//Partie medium-portable
 @media screen and (min-width:520px){
     h3{
         font-size: 1.4em;
@@ -120,7 +116,7 @@ section:nth-child(2) header, section:last-child header{
         }
     }
 }
-
+//Partie tablette
 @media screen and (min-width:768px) {
     h2{
         font-size: 1.8em;
@@ -163,7 +159,7 @@ section:nth-child(2) header, section:last-child header{
         }
     }
 }
-
+//Partie desktop
 @media screen and (min-width:1280px) {  
     .working{
         margin-left: auto;

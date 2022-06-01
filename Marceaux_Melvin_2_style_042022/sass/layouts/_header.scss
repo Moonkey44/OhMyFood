@@ -1,7 +1,9 @@
+//Configuration de l'entête de la page
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
+    //avec ca partie media queries
         @media screen and (min-width: 720px) {
         height: 5em;
     }

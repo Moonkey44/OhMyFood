@@ -1,3 +1,4 @@
+//configuration de mes pseudos-éléments avec leurs animations
 .fa-heart{
     font-size: 38px;
     &::after{
@@ -8,7 +9,7 @@
         opacity: 1;
         font-weight: 100;
     }
-        
+    //On pout créer une transition propre en jouant sur le poid de la police (changement de format font awesome)
     &::before{
         position: absolute;
         top: 23%;
@@ -22,6 +23,7 @@
         color: transparent;
         transform: scale(0);
     }
+    //avec un changement sur l'opacité des pseudos-éléments
     &:hover{
         &::after{
             opacity: 0;

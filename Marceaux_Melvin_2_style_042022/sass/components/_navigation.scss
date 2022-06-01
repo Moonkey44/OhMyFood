@@ -1,3 +1,4 @@
+// Configuration du boutton de navigation pour la section restaurant
 &__navigation{
     width: 100%;
     font-size: 1em;
@@ -13,7 +14,7 @@
         @include button;
     }
 }
-
+//PArtie media queries du boutton de navigation
 @media screen and (min-width:520px) {
     &__navigation{
         width: 85%;
