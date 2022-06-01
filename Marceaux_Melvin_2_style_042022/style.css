@@ -163,6 +163,15 @@ body {
   position: relative;
 }
 
+section:nth-child(2) header, section:last-child header {
+  display: flex;
+  justify-content: left;
+}
+section:nth-child(2) header h2, section:last-child header h2 {
+  text-align: left;
+  margin-left: 8%;
+}
+
 .information {
   display: flex;
   flex-direction: column;

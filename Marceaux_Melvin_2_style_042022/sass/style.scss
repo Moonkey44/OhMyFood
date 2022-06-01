@@ -23,6 +23,16 @@ body{
     position: relative;
 }
 
+//Positionnement du titres de mes sections 
+section:nth-child(2) header, section:last-child header{
+    display: flex;
+    justify-content: left;
+    h2{
+        text-align: left;
+        margin-left: 8%;
+    }
+}
+
 //Section information
 .information{
     display: flex;
