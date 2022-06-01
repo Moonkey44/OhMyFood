@@ -20,7 +20,6 @@
         // Appel de 2 animations pour le cercle car le spinning ne doit pas prendre un alternate en paramètre;
         animation: linear 3s loader-spinning,
                    alternate linear 3s loader-shadow;
-                   
     }
     p{
         position: absolute;   
