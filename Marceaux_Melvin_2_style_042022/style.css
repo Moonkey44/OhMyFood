@@ -27,7 +27,7 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 28px;
+  font-size: 19px;
   animation: loader-closing 500ms 2.5s forwards;
 }
 .loader__circle {
@@ -37,7 +37,7 @@ a {
   border-radius: 50%;
   animation: linear 3s loader-spinning, alternate linear 3s loader-shadow;
 }
-.loader p {
+.loader h2 {
   position: absolute;
   opacity: 0.9;
 }

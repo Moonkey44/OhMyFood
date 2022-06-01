@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 28px;
+    font-size: 19px;
     animation: loader-closing 500ms 2.5s forwards;
     &__circle{
         width: 300px;
@@ -20,7 +20,7 @@
         animation: linear 3s loader-spinning,
                    alternate linear 3s loader-shadow;
     }
-    p{
+    h2{
         position: absolute;
         opacity: 0.90;   
     }
