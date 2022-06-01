@@ -214,8 +214,8 @@ body {
 .information__navigation__button {
   display: flex;
   opacity: 0.9;
-  height: 60px;
-  width: 70%;
+  height: 55px;
+  width: 62%;
   max-width: 300px;
   justify-content: center;
   align-items: center;
@@ -231,8 +231,10 @@ body {
 }
 @media screen and (min-width: 520px) {
   .information__navigation {
-    width: 85%;
     font-size: 1.3em;
+  }
+  .information__navigation__button {
+    height: 60px;
   }
 }
 

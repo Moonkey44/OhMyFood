@@ -5,8 +5,8 @@
     &__button{
         display: flex;
         opacity: 0.9;
-        height: 60px;
-        width:70%;
+        height: 55px;
+        width:62%;
         max-width: 300px;
         justify-content: center;
         align-items: center;      
@@ -17,7 +17,9 @@
 //PArtie media queries du boutton de navigation
 @media screen and (min-width:520px) {
     &__navigation{
-        width: 85%;
+        &__button{
+            height: 60px;
+        }
         font-size: 1.3em;
     }
 }
