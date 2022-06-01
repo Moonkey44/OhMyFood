@@ -13,6 +13,10 @@ p, li {
   font-family: "Roboto", "sans-serif";
 }
 
+a {
+  color: inherit;
+}
+
 .header {
   display: flex;
   justify-content: center;
