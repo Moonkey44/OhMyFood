@@ -27,8 +27,7 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 30px;
-  letter-spacing: 1px;
+  font-size: 28px;
   animation: loader-closing 500ms 2.5s forwards;
 }
 .loader__circle {
