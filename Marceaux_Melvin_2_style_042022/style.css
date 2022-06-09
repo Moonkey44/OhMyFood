@@ -37,9 +37,11 @@ a {
   border-radius: 50%;
   animation: linear 3s loader-spinning, alternate linear 3s loader-shadow;
 }
-.loader h2 {
+.loader p {
+  font-family: "Shrikhand";
+  font-size: 1.6em;
   position: absolute;
-  opacity: 0.9;
+  opacity: 0.98;
 }
 
 @keyframes loader-shadow {
@@ -69,20 +71,30 @@ a {
   }
 }
 .header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (min-width: 720px) {
-  .header {
-    height: 5em;
-  }
-}
-.header img {
-  height: 60px;
+  margin: 0;
+  padding: 0;
   width: 50%;
 }
+.header img {
+  position: absolute;
+  width: 60%;
+  max-width: 12em;
+}
 
+@media screen and (min-width: 520px) {
+  .header {
+    height: 80px;
+  }
+}
 .new {
   position: relative;
 }
@@ -156,10 +168,6 @@ h2 {
 h3 {
   font-size: 1em;
   margin-bottom: 0px;
-}
-
-body {
-  position: relative;
 }
 
 section:nth-child(2) header, section:last-child header {

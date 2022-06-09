@@ -20,9 +20,11 @@
         animation: linear 3s loader-spinning,
                    alternate linear 3s loader-shadow;
     }
-    h2{
+    p{
+        font-family: "Shrikhand";
+        font-size: 1.6em;
         position: absolute;
-        opacity: 0.90;   
+        opacity: 0.98;   
     }
 }
 
