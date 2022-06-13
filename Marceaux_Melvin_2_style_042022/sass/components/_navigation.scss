@@ -11,10 +11,10 @@
         justify-content: center;
         align-items: center;      
         margin: 0 auto 60px auto;
-        @include button;
+        @include button($color-primary,$color-secondary);
     }
 }
-//PArtie media queries du boutton de navigation
+//Partie media queries du boutton de navigation
 @media screen and (min-width:520px) {
     &__navigation{
         &__button{

@@ -36,7 +36,7 @@ section:nth-child(2) header, section:last-child header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lighten($color: #DEEBFF, $amount: 3.5%);
+    background-color: $color-bg;
     @import "./components/_position.scss";
     header{
         width: 85%;
@@ -66,7 +66,7 @@ section:nth-child(2) header, section:last-child header{
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background-color: lighten($color: #DEEBFF, $amount: 3.5%);
+    background-color: $color-bg;
     &__header{
         min-width: 100%;
     }

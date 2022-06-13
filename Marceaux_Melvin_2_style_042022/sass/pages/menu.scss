@@ -189,7 +189,7 @@ header{
 //Configuration du boutton d'envoie de formulaire
 .order{
     margin: 35px auto 80px auto;
-    @include button;
+    @include button($color-primary,$color-secondary);
     border: none;
     width: 60%;
     height: 50px;

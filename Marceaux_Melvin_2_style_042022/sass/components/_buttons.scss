@@ -2,7 +2,7 @@
 &__btn{
     display: flex;
     align-items: center;
-    background: $color-button;
+    background: $color-bg;
     border: none;
     height: 4.5em;
     width: 85%;
@@ -55,7 +55,7 @@
 
     //Eclaircissement du background + augmentation de l'ombre portée au survol
     &:hover{
-        background: lighten($color-button,1%);
+        background: lighten($color-bg,1%);
         box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 1);
         .btn-label{
             &__icon{
